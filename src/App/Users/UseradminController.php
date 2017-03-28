@@ -10,6 +10,7 @@ namespace ShawnSandy\Dash\App\Users;
 
 
 use App\User;
+use Crew\Unsplash\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Session;
@@ -49,6 +50,19 @@ class UseradminController extends Controller
         $user = User::find($id);
 
         return view("dash::useradmin-page", compact("user"));
+    }
+
+    public function destroy(Request $request, $id) {
+
+        try {
+            User::destroy($id);
+            Session::flash("sucess", "User deleted");
+
+        } catch (Exception $exception) {
+            \Log::alert("Log user not deleted ");
+            Session::flash("success", "User deleted");
+        }
+
     }
 
 }
