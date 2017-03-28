@@ -66,9 +66,8 @@ gulp.task('build', function() {
 
 gulp.task('sass', function() {
     return gulp.src('./src/resources/assets/**/*.scss', { 'base': './src/resources/assets/' })
-        .pipe(changed('./src/resources/assets/**/*.scss'))
         .pipe(sass().on('error', notify.onError("Error: <%= error.message %>")))
-        .pipe(gulp.dest('./src/resources/assets'))
+        .pipe(gulp.dest('./src/public/dash/'))
         .pipe(notify({
             title: "Pages Notification",
             message: "SCSS files compiled, enjoy",
@@ -78,7 +77,6 @@ gulp.task('sass', function() {
 
 gulp.task('package', function() {
     return gulp.src('./src/resources/assets/**/*.*', { 'base': './src/resources/assets/' })
-        .pipe(changed('./src/resources/assets/**/*.*'))
         .pipe(gulp.dest('../../public/assets/'))
 })
 
