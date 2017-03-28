@@ -84,15 +84,26 @@ gulp.task('sass', function() {
 });
 
 gulp.task('package', function() {
-    return gulp.src(['./src/resources/assets/**/*.js'], {
-            'base': './src/resources/assets/'
+    return gulp.src(['./src/resources/assets/**/*.js', './src/resources/assets/sass/**/*.css'], {
+            'base': './src/resources/assets/**/*.*'
         })
         .pipe(changed('../../public/assets/dash/'))
         .pipe(gulp.dest('../../public/assets/dash/'))
-})
+});
+
+
+gulp.task('dev:css', function() {
+
+    return gulp.src(['./src/resources/assets/sass/**/*.css'], {
+            'base': './src/resources/assets/sass/'
+        })
+        .pipe(changed('../../public/assets/dash/css'))
+        .pipe(gulp.dest('../../public/assets/dash/css'))
+
+});
 
 gulp.task('watch:sass', function() {
     gulp.watch('./src/resources/assets/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ["sass", "package", "copy:fonts"], function() {})
+gulp.task('default', ["sass", "copy:fonts", "dev:css"], function() {})
