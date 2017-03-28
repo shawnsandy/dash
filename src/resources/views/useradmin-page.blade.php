@@ -15,9 +15,8 @@
                     <h4>{{ Html::dashIcons() }}Sidebar Title</h4>
                     <hr>
                 </div>
-            </div>2
+            </div>
         </div>
-
     </div>
 
 @endsection

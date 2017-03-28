@@ -134,11 +134,12 @@
 
         <!-- Page Content -->
 
-        <div class="container-fluid">
-            {{ Html::dashMessages() }}
-        </div>
+
 
         <main>
+            <div class="container-fluid">
+                {{ Html::dashMessages() }}
+            </div>
             @yield("content")
         </main>
 

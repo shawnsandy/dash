@@ -56,12 +56,14 @@ class UseradminController extends Controller
 
         try {
             User::destroy($id);
-            Session::flash("sucess", "User deleted");
+            Session::flash("success", "User deleted");
 
         } catch (Exception $exception) {
-            \Log::alert("Log user not deleted ");
-            Session::flash("success", "User deleted");
+            \Log::alert("User not deleted ");
+            Session::flash("error", "User deleted");
         }
+
+        return redirect('/admin/users');
 
     }
 
