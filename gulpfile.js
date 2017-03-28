@@ -17,7 +17,9 @@ const icons = function(iconsDir, outputDir) {
     var deferred = q.defer(),
         iconDir = iconsDir;
 
-    options = { enhanceSVG: true };
+    options = {
+        enhanceSVG: true
+    };
 
     var files = fs.readdirSync(iconDir).map(function(fileName) {
         return path.join(iconDir, fileName);
@@ -52,20 +54,25 @@ gulp.task('images', function() {
 });
 
 gulp.task('copy:fonts', function() {
-    gulp.src('./node_modules/bootstrap-sass/assets/**/*.*')
-        .pipe(gulp.dest('./src/public/css/fonts/'));
+    gulp.src('./node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*.*')
+        .pipe(changed('./src/public/css/fonts/bootstrap'))
+        .pipe(gulp.dest('./src/public/css/fonts/bootstrap'));
 });
 
 gulp.task('build', function() {
     gulp.src([
             './node_modules/aos/dist/**/*.*',
-        ], { 'base': 'node_modules' })
+        ], {
+            'base': 'node_modules'
+        })
         .pipe(gulp.dest('src/public/assets/'))
 });
 
 
 gulp.task('sass', function() {
-    return gulp.src('./src/resources/assets/**/*.scss', { 'base': './src/resources/assets/sass/' })
+    return gulp.src('./src/resources/assets/**/*.scss', {
+            'base': './src/resources/assets/sass/'
+        })
         .pipe(changed('./src/resources/assets/**/*.scss'))
         .pipe(sass().on('error', notify.onError("Error: <%= error.message %>")))
         .pipe(gulp.dest('./src/public/assets/dash/css'))
@@ -77,13 +84,15 @@ gulp.task('sass', function() {
 });
 
 gulp.task('package', function() {
-    return gulp.src(['./src/resources/assets/**/*.css', './src/resources/assets/**/*.js'], { 'base': './src/resources/assets/' })
-        .pipe(changed('./src/resources/assets/'))
-        .pipe(gulp.dest('../../public/assets/'))
+    return gulp.src(['./src/resources/assets/**/*.js'], {
+            'base': './src/resources/assets/'
+        })
+        .pipe(changed('../../public/assets/dash/'))
+        .pipe(gulp.dest('../../public/assets/dash/'))
 })
 
 gulp.task('watch:sass', function() {
     gulp.watch('./src/resources/assets/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ["sass", "package"], function() {})
+gulp.task('default', ["sass", "package", "copy:fonts"], function() {})
