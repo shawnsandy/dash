@@ -1,4 +1,4 @@
-# dash
+# Dash (beta)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -6,8 +6,6 @@
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
-
-### START HERE
 
 Dash is a Laravel package that makes Admin / UI development easier. Warning it will not do **all of yourcrud work** and some code is required. Enjoy! (Preview Release)
 
@@ -33,6 +31,7 @@ __Add to config/app.pgp aliases array__
 "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
 'Form' => Collective\Html\FormFacade::class,
 'Html' => Collective\Html\HtmlFacade::class,
+
 ```
 
 ## Usage
