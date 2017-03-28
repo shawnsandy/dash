@@ -1,0 +1,36 @@
+@import "_sass/variables";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "mixins";
+ main {
+   padding: 30px 10px;
+ }
+
+.btn {
+  border-radius: 16px;
+}
+
+.dataTable {
+
+  tr {
+    color: gray;
+  }
+  tr.selected {
+    color: #000;
+    background-color: #F5F8F9;
+    font-weight: 500;
+
+  }
+
+}
+
+
+.panel {
+  padding: 20px;
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h5, h5 {
+    margin-top: 0px;
+    margin-bottom: 11px;
+    color: darkgrey;
+    text-transform: uppercase;
+  }
+}
