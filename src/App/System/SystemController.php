@@ -8,15 +8,13 @@
 
 namespace ShawnSandy\Dash\App\System;
 
-
 use Illuminate\Routing\Controller;
 
-class  SystemController extends Controller
+class SystemController extends Controller
 {
 
     public function __invoke()
     {
         return view("dash::system");
     }
-
 }

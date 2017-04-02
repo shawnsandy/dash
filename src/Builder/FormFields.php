@@ -8,7 +8,6 @@
 
 namespace ShawnSandy\Dash\Builder;
 
-
 use Collective\Html\FormFacade as Form ;
 
 class FormFields
@@ -22,10 +21,10 @@ class FormFields
 
     public function __construct()
     {
-
     }
 
-    public function render($function, $options = []) {
+    public function render($function, $options = [])
+    {
         return call_user_func_array(array($this, "$function"), $options);
     }
 
@@ -40,7 +39,6 @@ class FormFields
 
     public function fields()
     {
-
     }
 
     /**
@@ -112,6 +110,4 @@ class FormFields
         $field = Form::dashFile($field_name);
         return $field;
     }
-
-
 }

@@ -8,12 +8,10 @@
 
     namespace ShawnSandy\Dash\App;
 
+class Dash
+{
 
-    class Dash
+    public function __construct()
     {
-
-        public function __construct()
-        {
-        }
-
     }
+}

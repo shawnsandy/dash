@@ -8,15 +8,14 @@
 
 namespace ShawnSandy\Dash;
 
-
 use Illuminate\Support\Facades\Facade ;
 
 class DashFacade extends Facade
 {
 
 
-    protected static function getFacadeAccessor() {
+    protected static function getFacadeAccessor()
+    {
         return "Dash";
     }
-
 }

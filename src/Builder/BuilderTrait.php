@@ -8,9 +8,8 @@
 
     namespace ShawnSandy\Dash\Builder;
 
+trait BuilderTrait
+{
 
-    trait BuilderTrait
-    {
 
-
-    }
+}

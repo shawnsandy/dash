@@ -31,7 +31,8 @@ class DashServicesProvider extends ServiceProvider
         $this->publishes(
             [
                 __DIR__ . '/resources/views' => resource_path('views/vendor/dash'),
-            ], 'dash-views'
+            ],
+            'dash-views'
         );
 
         /**
@@ -41,7 +42,8 @@ class DashServicesProvider extends ServiceProvider
             [
                 __DIR__.'/resources/assets/js/' => public_path('assets/dash/js/'),
                 __DIR__.'/public/css/' => public_path('assets/dash/css/')
-            ], 'dash-assets'
+            ],
+            'dash-assets'
         );
 
         /**
@@ -56,10 +58,8 @@ class DashServicesProvider extends ServiceProvider
             include_once __DIR__ . '/Helpers/helper.php';
         endif;
 
-       include_once __DIR__ ."/components/html-components.php";
-       include_once __DIR__ ."/components/form-components.php";
-
-
+        include_once __DIR__ ."/components/html-components.php";
+        include_once __DIR__ ."/components/form-components.php";
     }
 
     /**
@@ -70,21 +70,21 @@ class DashServicesProvider extends ServiceProvider
     public function register()
     {
 
-       $this->mergeConfigFrom(
-            __DIR__ . '/config/config.php', 'dash'
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/config.php',
+            'dash'
         );
 
-       $this->app->bind('Dash', function() {
-           return new Dash();
-       });
+        $this->app->bind('Dash', function () {
+            return new Dash();
+        });
 
-       $this->app->bind('DashForms', function(){
-          return new GenerateFormsFields();
-       });
+        $this->app->bind('DashForms', function () {
+            return new GenerateFormsFields();
+        });
 
-       $this->app->bind(GenerateFormFieldsFacade::class, function () {
-           return new GenerateFields();
-       });
-
+        $this->app->bind(GenerateFormFieldsFacade::class, function () {
+            return new GenerateFields();
+        });
     }
 }

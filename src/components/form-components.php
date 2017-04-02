@@ -6,37 +6,70 @@
      * Time: 1:24 AM
      */
 
-Form::component('dashOpen', 'dash::components.forms.open',
-        ["options" => [], "model" => null ]);
+Form::component(
+    'dashOpen',
+    'dash::components.forms.open',
+    ["options" => [], "model" => null ]
+);
 
 Form::component('dashClose', 'dash::components.forms.close', []);
 
-Form::component('dashText', 'dash::components.forms.dash-text',
-    ["name", 'title' => 'Text', "attributes" => [], "value", ]);
+Form::component(
+    'dashText',
+    'dash::components.forms.dash-text',
+    ["name", 'title' => 'Text', "attributes" => [], "value", ]
+);
 
-Form::component('dashTextarea', 'dash::components.forms.dash-textarea',
-    ["name", 'title' => 'Textarea', "attributes" => [], "value", ]);
+Form::component(
+    'dashTextarea',
+    'dash::components.forms.dash-textarea',
+    ["name", 'title' => 'Textarea', "attributes" => [], "value", ]
+);
 
-Form::component('dashRichText', 'dash::components.forms.dash-rich-text',
-    ["name", 'title' => 'Rich Text', "attributes" => [], "value", ]);
+Form::component(
+    'dashRichText',
+    'dash::components.forms.dash-rich-text',
+    ["name", 'title' => 'Rich Text', "attributes" => [], "value", ]
+);
 
-Form::component('dashSelect', 'dash::components.forms.dash-select',
-    ["name", 'title' => 'Select', "attributes" => [], "value", ]);
+Form::component(
+    'dashSelect',
+    'dash::components.forms.dash-select',
+    ["name", 'title' => 'Select', "attributes" => [], "value", ]
+);
 
-Form::component('dashPassword', 'dash::components.forms.dash-password',
-    ["name", 'title' => 'Password', "attributes" => [], "value", ]);
+Form::component(
+    'dashPassword',
+    'dash::components.forms.dash-password',
+    ["name", 'title' => 'Password', "attributes" => [], "value", ]
+);
 
-Form::component('dashEmail', 'dash::components.forms.dash-email',
-    ["name", 'title' => 'Email', "attributes" => [], "value", ]);
+Form::component(
+    'dashEmail',
+    'dash::components.forms.dash-email',
+    ["name", 'title' => 'Email', "attributes" => [], "value", ]
+);
 
-Form::component('dashTime', 'dash::components.forms.dash-time',
-    ["name", 'title' => 'Time', "attributes" => [], "value", ]);
+Form::component(
+    'dashTime',
+    'dash::components.forms.dash-time',
+    ["name", 'title' => 'Time', "attributes" => [], "value", ]
+);
 
-Form::component('dashDate', 'dash::components.forms.dash-date',
-    ["name", 'title' => 'Date', "attributes" => [], "value", ]);
+Form::component(
+    'dashDate',
+    'dash::components.forms.dash-date',
+    ["name", 'title' => 'Date', "attributes" => [], "value", ]
+);
 
-Form::component('dashDateTime', 'dash::components.forms.dash-date-time',
-    ["name", 'title' => 'Date Time', "attributes" => [], "value", ]);
+Form::component(
+    'dashDateTime',
+    'dash::components.forms.dash-date-time',
+    ["name", 'title' => 'Date Time', "attributes" => [], "value", ]
+);
 
-Form::component('error', 'dash::components.forms.errors',
-    ["name", 'title', "attributes", "value", ]);
+Form::component(
+    'error',
+    'dash::components.forms.errors',
+    ["name", 'title', "attributes", "value", ]
+);
