@@ -34,7 +34,6 @@ const icons = function(iconsDir, outputDir) {
 
 };
 
-
 gulp.task('icons:entypo', function() {
     icons('svgs/entypo_385_icons/SVG/', 'entypo');
 });
@@ -68,7 +67,6 @@ gulp.task('build', function() {
         .pipe(gulp.dest('src/public/assets/'))
 });
 
-
 gulp.task('sass', function() {
     return gulp.src('./src/resources/assets/**/*.scss', {
             'base': './src/resources/assets/sass/'
@@ -90,7 +88,6 @@ gulp.task('package', function() {
         .pipe(changed('../../public/assets/dash/'))
         .pipe(gulp.dest('../../public/assets/dash/'))
 });
-
 
 gulp.task('dev:css', function() {
 
