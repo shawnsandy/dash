@@ -40,3 +40,40 @@
     text-transform: uppercase;
   }
 }
+
+
+.svg-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.svg {
+
+  display: inline-block;
+
+  &.svg-16 {
+    height: 16px;
+    width: 16px;
+  }
+
+  &.svg-24 {
+    height: 24px;
+    width: 24px;
+  }
+
+  &.svg-32 {
+    height: 32px;
+    width: 32px;
+  }
+
+  &.svg-48 {
+    height: 48px;
+    width: 48px;
+  }
+
+  &.svg-48 {
+    height: 48px;
+    width: 48px;
+  }
+
+}
