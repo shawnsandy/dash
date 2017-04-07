@@ -19,6 +19,10 @@ Form::component(
     ["model" => ""]
 );
 
+
+Form::component('dashLabel', 'dash::components.forms.label', ["title", "name" => null]);
+
+
 Form::component('dashClose', 'dash::components.forms.close', []);
 
 

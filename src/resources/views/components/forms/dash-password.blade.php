@@ -1,5 +1,5 @@
 <div class="form-group {{ $name }}">
-    <label for="{{ $name }}" class="{{ $name }}">{{ $title }}</label>
+     {{ Form::dashLabel($title, $name)}}
     {{ Form::password($name, array_merge(['class' => "form-control dash-password $name"], $attributes)) }}
 
 </div>
