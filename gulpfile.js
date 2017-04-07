@@ -90,7 +90,6 @@ gulp.task('package', function() {
 });
 
 gulp.task('dev:css', function() {
-
     return gulp.src(['./src/resources/assets/sass/**/*.css'], {
             'base': './src/resources/assets/sass/'
         })

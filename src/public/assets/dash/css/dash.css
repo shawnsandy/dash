@@ -5836,3 +5836,25 @@ main {
     margin-bottom: 11px;
     color: darkgrey;
     text-transform: uppercase; }
+
+.svg-icons {
+  display: inline-block;
+  vertical-align: middle; }
+
+.svg {
+  display: inline-block; }
+  .svg.svg-16 {
+    height: 16px;
+    width: 16px; }
+  .svg.svg-24 {
+    height: 24px;
+    width: 24px; }
+  .svg.svg-32 {
+    height: 32px;
+    width: 32px; }
+  .svg.svg-48 {
+    height: 48px;
+    width: 48px; }
+  .svg.svg-48 {
+    height: 48px;
+    width: 48px; }
