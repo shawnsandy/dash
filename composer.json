@@ -8,23 +8,21 @@
     ],
     "homepage": "https://github.com/shawnsandy/dash",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Shawn Sandy",
-            "email": "shawnsandy04@gmail.com",
-            "homepage": "https://github.com/shawnsandy",
-            "role": "Developer"
-        }
-    ],
+    "authors": [{
+        "name": "Shawn Sandy",
+        "email": "shawnsandy04@gmail.com",
+        "homepage": "https://github.com/shawnsandy",
+        "role": "Developer"
+    }],
     "require": {
         "php": "~5.6|~7.0",
         "brotzka/laravel-dotenv-editor": "2.*",
-        "laravelcollective/html": "5.3.0",
+        "laravelcollective/html": "5.3.1",
         "rap2hpoutre/laravel-log-viewer": "^0.8.0",
         "shawnsandy/extras": "^0.1.21"
     },
     "require-dev": {
-        "phpunit/phpunit" : "~4.0||~5.0",
+        "phpunit/phpunit": "~4.0||~5.0",
         "squizlabs/php_codesniffer": "^2.3"
     },
     "autoload": {
