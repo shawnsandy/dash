@@ -57,24 +57,20 @@
                 </div>
 
                 <aside class="panel">
+
                     <div class="panel-heading">
-                        Add New User
+                        <h4>{{ Html::dashIcons() }} Add New User</h4>
+                        <hr>
                     </div>
+
                     <div class="panel-body">
 
                         {{ config(["dash.forms.users.field_types.password" => "text"]) }}
 
-                        {{ Form::dashOpen(['url' => '/admin/users' ]) }}
-
-                        {{ Form::dashFields('App\User')}}
-
-                        <p>
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </p>
-
-                        {{ Form::dashClose() }}
-
+                        {{ Form::createForm('App\User', "admin/users") }}
+                    
                     </div>
+
                 </aside>
 
             </div>

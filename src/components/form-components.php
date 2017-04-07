@@ -1,15 +1,29 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Shawn
-     * Date: 3/16/2017
-     * Time: 1:24 AM
-     */
+
+/**
+* Created by PhpStorm.
+* User: Shawn
+* Date: 3/16/2017
+* Time: 1:24 AM
+*/
+
+
+Form::component(
+    "createForm",  "dash::components.forms.create", 
+    ["model", "url", "options" => []]
+);
+
+
+Form::component(
+    "editFrom",  "dash::components.forms.create", 
+    ["model", "url", "data", "options" => []]
+);
+
 
 Form::component(
     'dashOpen',
     'dash::components.forms.open',
-    ["options" => [], "model" => null ]
+    ["options" => [], "data" => null ]
 );
 
 
