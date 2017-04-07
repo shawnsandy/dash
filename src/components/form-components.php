@@ -12,7 +12,16 @@ Form::component(
     ["options" => [], "model" => null ]
 );
 
+
+Form::component(
+    'dashFields',
+    'dash::components.forms.fields',
+    ["model" => ""]
+);
+
 Form::component('dashClose', 'dash::components.forms.close', []);
+
+
 
 Form::component(
     'dashText',
