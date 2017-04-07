@@ -66,9 +66,7 @@
 
                         {{ Form::dashOpen(['url' => '/admin/users' ]) }}
 
-                        @foreach(DashForms::buildModelFields('App\User') as $field)
-                            {{ $field }}
-                        @endforeach
+                        {{ Form::dashFields('App\User')}}
 
                         <p>
                             <button type="submit" class="btn btn-primary">Save</button>
