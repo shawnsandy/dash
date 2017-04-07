@@ -75,7 +75,7 @@ class FormFields
 
     public function textarea($field_name, $value = null)
     {
-        $field = Form::dashTextArea($field_name, $value);
+        $field = Form::dashTextarea($field_name, $value);
         return $field;
     }
 
