@@ -53,7 +53,7 @@
 
         $(el + ' tbody').on('click', 'tr', function () {
             data_btn = $(this).find(".data-btn");
-            $(".btn").prop("disabled", true);
+            $(".data-btn").prop("disabled", true);
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
                 data_btn.prop("disabled", true);

@@ -8,17 +8,15 @@
 
     namespace ShawnSandy\Dash\Builder;
 
-
     use Collective\Html\HtmlBuilder;
 
-    class GenerateBuilder
+class GenerateBuilder
+{
+
+    protected $component;
+
+    public function __construct()
     {
-
-        protected $component;
-
-        public function __construct()
-        {
-            $this->component = app(HtmlBuilder::class);
-        }
-
+        $this->component = app(HtmlBuilder::class);
     }
+}

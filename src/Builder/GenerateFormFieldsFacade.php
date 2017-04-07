@@ -8,14 +8,13 @@
 
     namespace ShawnSandy\Dash\Builder;
 
-
     use Illuminate\Support\Facades\Facade;
 
-    class GenerateFormFieldsFacade extends Facade
+class GenerateFormFieldsFacade extends Facade
+{
+
+    public static function getFacadeAccessor()
     {
-
-        public static function getFacadeAccessor(){
-            return "DashForms";
-        }
-
+        return "DashForms";
     }
+}

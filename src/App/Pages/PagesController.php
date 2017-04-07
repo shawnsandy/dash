@@ -8,7 +8,6 @@
 
 namespace ShawnSandy\Dash\App\Pages;
 
-
 use Illuminate\Routing\Controller;
 
 class PagesController extends Controller
@@ -18,5 +17,4 @@ class PagesController extends Controller
     {
         return view("dash::pages");
     }
-
 }

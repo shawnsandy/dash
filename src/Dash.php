@@ -8,7 +8,6 @@
 
 namespace ShawnSandy\Dash;
 
-
 class Dash
 {
 
@@ -16,6 +15,4 @@ class Dash
     {
         require __DIR__ . '/routes.php';
     }
-
-
 }

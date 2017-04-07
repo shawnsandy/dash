@@ -8,15 +8,12 @@
 
     namespace ShawnSandy\Dash\App;
 
-
     use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
 
-    class Content
+class Content
+{
+
+    public function __construct(LaravelLogViewer $logViewer)
     {
-
-        public function __construct(LaravelLogViewer $logViewer)
-        {
-        }
-
-
     }
+}

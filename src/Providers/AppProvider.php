@@ -20,7 +20,6 @@ class Provider extends ServiceProvider
      */
     public function boot()
     {
-
     }
 
     /**
@@ -32,6 +31,4 @@ class Provider extends ServiceProvider
     {
         // TODO: Implement register() method.
     }
-
-
 }

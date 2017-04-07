@@ -8,17 +8,15 @@
 
 namespace   ShawnSandy\Dash\App\Dash;
 
-
 use Illuminate\Routing\Controller;
 
 class DashController extends Controller
 {
 
 
-    public function __invoke(){
+    public function __invoke()
+    {
 
         return view("dash::index");
-
     }
-
 }

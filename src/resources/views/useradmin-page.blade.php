@@ -5,7 +5,7 @@
         <div class="col-md-9">
             <div class="panel">
                 <div class="panel-body">
-                    {{ Html::dashCollectionPage($user, 'name', ["delete" => "/admin/users"]) }}
+                    {{ Html::dashCollectionPage($user, 'name', ["delete_url" => "/admin/users"]) }}
                 </div>
             </div>
         </div>
@@ -17,7 +17,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 @endsection

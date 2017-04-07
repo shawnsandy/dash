@@ -2,8 +2,10 @@
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "mixins";
+
  main {
    padding: 30px 10px;
+
  }
 
 .btn {
@@ -15,6 +17,7 @@
   tr {
     color: gray;
   }
+
   tr.selected {
     color: #000;
     background-color: #F5F8F9;
@@ -27,10 +30,50 @@
 
 .panel {
   padding: 20px;
+  border-radius: 5px;
+
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h5, h5 {
+
     margin-top: 0px;
     margin-bottom: 11px;
     color: darkgrey;
     text-transform: uppercase;
   }
+}
+
+
+.svg-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.svg {
+
+  display: inline-block;
+
+  &.svg-16 {
+    height: 16px;
+    width: 16px;
+  }
+
+  &.svg-24 {
+    height: 24px;
+    width: 24px;
+  }
+
+  &.svg-32 {
+    height: 32px;
+    width: 32px;
+  }
+
+  &.svg-48 {
+    height: 48px;
+    width: 48px;
+  }
+
+  &.svg-48 {
+    height: 48px;
+    width: 48px;
+  }
+
 }

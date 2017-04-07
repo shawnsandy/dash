@@ -8,7 +8,6 @@
 
 namespace ShawnSandy\Dash\App\Content;
 
-
 use Illuminate\Routing\Controller;
 
 class ContentController extends Controller
@@ -18,5 +17,4 @@ class ContentController extends Controller
     {
         return view("dash::content");
     }
-
 }

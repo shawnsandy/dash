@@ -8,7 +8,6 @@
 
 namespace ShawnSandy\Dash\App\Settings;
 
-
 use Illuminate\Routing\Controller;
 
 class SettingsController extends Controller
@@ -18,5 +17,4 @@ class SettingsController extends Controller
     {
         return view("dash::settings");
     }
-
 }

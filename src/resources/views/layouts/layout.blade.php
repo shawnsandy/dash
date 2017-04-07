@@ -19,7 +19,7 @@
 @stack("styles")
 <!-- Bootstrap Core CSS -->
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
-    <link rel="stylesheet" href="/css/dash.css">
+    <link rel="stylesheet" href="/assets/dash/css/dash.css">
     <!-- Custom CSS -->
     <link href="/css/simple-sidebar.css" rel="stylesheet">
 
@@ -41,27 +41,7 @@
                     <i class="fa fa-ellipsis-h"></i> <span class="nav-text"> Dash</span>
                 </a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-tachometer"></i> <span class="nav-text">Dashboard</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-pencil-square"></i> <span class="nav-text"> Articles</span></a>
-            </li>
-            <li>
-                <a href="/admin/pages"><i class="fa fa-file-text"></i> <span class="nav-text"> Pages</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-download"></i> <span class="nav-text"> Media</span></a>
-            </li>
-            <li>
-                <a href="{{ url("/admin/users") }}"><i class="fa fa-users"></i> <span class="nav-text"> Users</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-sliders"></i> <span class="nav-text"> Settings</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-cogs"></i> <span class="nav-text"> System</span></a>
-            </li>
+           @include("dash::partials.sidebar-menu")
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -134,11 +114,12 @@
 
         <!-- Page Content -->
 
-        <div class="container-fluid">
-            {{ Html::dashMessages() }}
-        </div>
+
 
         <main>
+            <div class="container-fluid">
+                {{ Html::dashMessages() }}
+            </div>
             @yield("content")
         </main>
 

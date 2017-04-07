@@ -23,7 +23,7 @@
             </div>
             <hr>
         @endforeach
-        <form class="inline form" action="{{ $options["delete"] }}/{{ $id }}">
+        <form class="inline form" action="{{ $options["delete_url"] }}/{{ $id }}" method="post">
             {{ method_field("DELETE") }}
             {{ csrf_field() }}
             <p class="text-right">

@@ -8,15 +8,12 @@
 
     namespace ShawnSandy\Dash\App\Users;
 
-
     use App\Http\Controllers\Controller;
 
-    class UseradminEditController extends Controller
+class UseradminEditController extends Controller
+{
+
+    public function __invoke($user_id)
     {
-
-        public function __invoke($user_id)
-        {
-
-        }
-
     }
+}
