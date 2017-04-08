@@ -10,6 +10,7 @@ namespace ShawnSandy\Dash\App\Users;
 
 use App\User;
 use Crew\Unsplash\Exception;
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Session;
@@ -40,7 +41,7 @@ class UseradminController extends Controller
 
 
         $data = $request->all();
-        $data['password'] = \Hash::make($request->password);
+        $data['password'] = Hash::make($request->password);
 
         if ($user = User::create($data)) {
             Session::flash("success", "User account for {$user->name} created.");
