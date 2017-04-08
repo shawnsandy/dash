@@ -6,5 +6,3 @@
         {{ $options["btn_reset"] or " Reset" }}
     </button>
 </p>
-
-{{ Form::close() }}

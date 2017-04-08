@@ -36,8 +36,37 @@ __Add to config/app.pgp aliases array__
 
 ## Usage
 
-``` php
-//coming soon
+__Dash Components__
+
+
+*Icons*
+
+``` blade
+
+{{ Html::dashIcons() }} 
+
+
+```
+
+
+*Data Table*
+
+``` blade
+{{ Html::dataTable($users, // users data
+    ["id", "name", "email", "created_at"], // columns (title)
+    ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], // options
+    ['class' => 'data-table'] // element attributes
+    )
+}}
+
+```
+
+*Forms
+
+``` blade
+
+{{ Form::createForm('App\User', "admin/users") }}
+
 ```
 
 ## Change log

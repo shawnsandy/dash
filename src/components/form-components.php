@@ -34,10 +34,12 @@ Form::component(
 );
 
 
-Form::component('dashLabel', 'dash::components.forms.label', ["title", "name" => null]);
+Form::component('dashLabel',
+'dash::components.forms.label', ["title", "name" => null]);
 
 
-Form::component('dashClose', 'dash::components.forms.close', []);
+Form::component('dashClose',
+    'dash::components.forms.close', []);
 
 
 
@@ -100,3 +102,4 @@ Form::component(
     'dash::components.forms.errors',
     ["name", 'title', "attributes", "value", ]
 );
+
