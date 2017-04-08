@@ -14,7 +14,7 @@
                                     <hr>
                                     {{ Html::dataTable($users, // users data
                                     ["id", "name", "email", "created_at"], // columns (title)
-                                    ['page_length' => 15, 'order' => "asc", "edit_url" => '/admin/users/'], // options
+                                    ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], // options
                                     ['class' => 'data-table'] // element attributes
                                     )
                                     }}
@@ -68,7 +68,7 @@
                         {{ config(["dash.forms.users.field_types.password" => "text"]) }}
 
                         {{ Form::createForm('App\User', "admin/users") }}
-                    
+
                     </div>
 
                 </aside>
