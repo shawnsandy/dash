@@ -38,10 +38,15 @@ class UseradminController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-        if ($user = User::create($request->input())) {
+
+        $data = $request->all();
+        $data['password'] = \Hash::make($request->password);
+
+        if ($user = User::create($data)) {
             Session::flash("success", "User account for {$user->name} created.");
             return back();
         }
+
     }
 
     public function show($id)
