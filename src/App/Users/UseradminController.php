@@ -70,4 +70,5 @@ class UseradminController extends Controller
 
         return redirect('/admin/users');
     }
+
 }
