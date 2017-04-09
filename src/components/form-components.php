@@ -15,6 +15,12 @@ Form::component(
 
 
 Form::component(
+    "editForm",  "dash::components.forms.create", 
+    ["model", "url", "data" => [], "options" => []]
+);
+
+
+Form::component(
     "editFrom",  "dash::components.forms.create", 
     ["model", "url", "data", "options" => []]
 );
