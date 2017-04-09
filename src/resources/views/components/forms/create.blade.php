@@ -5,5 +5,5 @@
 @endif
 
 {{ Form::dashFields($model) }}
-
+<hr>
 {{ Form::dashClose() }}

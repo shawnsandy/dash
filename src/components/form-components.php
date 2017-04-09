@@ -10,7 +10,7 @@
 
 Form::component(
     "createForm",  "dash::components.forms.create", 
-    ["model", "url", "options" => []]
+    ["model", "url", "data" => [], "options" => []]
 );
 
 
@@ -39,7 +39,7 @@ Form::component('dashLabel',
 
 
 Form::component('dashClose',
-    'dash::components.forms.close', []);
+    'dash::components.forms.close', ['button_label', 'button_style', 'options']);
 
 
 

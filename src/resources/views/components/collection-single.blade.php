@@ -27,8 +27,8 @@
             {{ method_field("DELETE") }}
             {{ csrf_field() }}
             <p class="text-right">
-                <button type="submit" class="btn btn-default">{{ Html::dashIcons("times") }} Delete</button>
                 <a href="{{ url()->previous() }}" class="btn btn-primary">{{ Html::dashIcons("chevron-left") }} Back</a>
+                <button type="submit" class="btn btn-default">{{ Html::dashIcons("times") }} Delete</button>
             </p>
         </form>
     </div>
