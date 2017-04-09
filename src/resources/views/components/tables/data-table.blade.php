@@ -70,7 +70,7 @@
                     console.log("No edit url for row " + row_id)
                 } else {
                     console.log(edit_url + row_id);
-                    window.location.href = edit_url + row_id;
+                    window.location.href = edit_url + row_id + "/edit";
                 }
 
             });

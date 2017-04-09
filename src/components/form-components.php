@@ -10,7 +10,7 @@
 
 Form::component(
     "createForm",  "dash::components.forms.create", 
-    ["model", "url", "options" => []]
+    ["model", "url", "data" => [], "options" => []]
 );
 
 

@@ -57,6 +57,14 @@ class UseradminController extends Controller
         return view("dash::useradmin-page", compact("user"));
     }
 
+
+    public function edit($id)
+    {
+        $user = User::find($id);
+
+        return view("dash::useradmin-page", compact("user"));
+    }
+
     public function destroy(Request $request, $id)
     {
 
@@ -70,5 +78,6 @@ class UseradminController extends Controller
 
         return redirect('/admin/users');
     }
+
 
 }
