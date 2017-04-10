@@ -1,9 +1,3 @@
-
-@if(isset($data))
-{{ Form::dashOpen(["url" => $url]) }}
-@else 
-
-@endif
 {{ Form::dashFields($model) }}
 
 <p class="text-right">
