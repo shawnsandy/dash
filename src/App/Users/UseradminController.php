@@ -10,6 +10,7 @@ namespace ShawnSandy\Dash\App\Users;
 
 use App\User;
 use Crew\Unsplash\Exception;
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Session;
@@ -38,13 +39,26 @@ class UseradminController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-        if ($user = User::create($request->input())) {
+
+        $data = $request->all();
+        $data['password'] = Hash::make($request->password);
+
+        if ($user = User::create($data)) {
             Session::flash("success", "User account for {$user->name} created.");
             return back();
         }
+
     }
 
     public function show($id)
+    {
+        $user = User::find($id);
+
+        return view("dash::useradmin-page", compact("user"));
+    }
+
+
+    public function edit($id)
     {
         $user = User::find($id);
 
@@ -64,4 +78,6 @@ class UseradminController extends Controller
 
         return redirect('/admin/users');
     }
+
+
 }

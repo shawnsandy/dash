@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Dash is a Laravel package that makes Admin / UI development easier. Warning it will not do **all of yourcrud work** and some code is required. Enjoy! (Preview Release)
+Dash is a Laravel package that makes Admin / UI development easier. Warning it will not do **all of your crud work**, code is required. Enjoy! (Preview Release)
 
 ## Install
 
@@ -20,15 +20,24 @@ $ composer require shawnsandy/dash
 __Add to the config/app.php providers array__ 
 
 ``` php
+
 ShawnSandy\Dash\DashServicesProvider::class,
+
+// dependencies
 Collective\Html\HtmlServiceProvider::class,
+
 ```
 
-__Add to config/app.pgp aliases array__
+__Add to config/app.php aliases array__
+
 
 ```php 
+
 "Dash" => ShawnSandy\Dash\DashFacade::class,
 "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
+
+// dependencies
+
 'Form' => Collective\Html\FormFacade::class,
 'Html' => Collective\Html\HtmlFacade::class,
 
@@ -36,8 +45,37 @@ __Add to config/app.pgp aliases array__
 
 ## Usage
 
-``` php
-//coming soon
+__Dash Components__
+
+
+*Icons*
+
+``` blade
+
+{{ Html::dashIcons() }} 
+
+
+```
+
+
+*Data Table*
+
+``` blade
+{{ Html::dataTable($users, // users data
+    ["id", "name", "email", "created_at"], // columns (title)
+    ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], // options
+    ['class' => 'data-table'] // element attributes
+    )
+}}
+
+```
+
+*Forms
+
+``` blade
+
+{{ Form::createForm('App\User', "admin/users") }}
+
 ```
 
 ## Change log

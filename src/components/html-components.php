@@ -10,7 +10,13 @@ Html::component("dashMessages", "dash::partials.messages", []);
 
 Html::component("dashIcons", "dash::components.icon", ['name' => "circle-o", "selector" => "fa fa-"]);
 
-Html::component("dataTable", "dash::components.tables.data-table", ["data" => [], "table_columns", "options", "attributes", "table_id"]);
+Html::component("dataTable", "dash::components.tables.data-table",
+["data" => [],
+"table_columns",
+"options",
+"attributes" => ['class' => 'data-table'],
+"table_id"]
+);
 
 Html::component("dashButton", "dash::components.tables.button", ['name', 'options' => ["class" => "btn"]]);
 

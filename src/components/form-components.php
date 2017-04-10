@@ -10,13 +10,13 @@
 
 Form::component(
     "createForm",  "dash::components.forms.create", 
-    ["model", "url", "options" => []]
+    ["model", "url", "data" => [], "options" => []]
 );
 
 
 Form::component(
-    "editFrom",  "dash::components.forms.create", 
-    ["model", "url", "data", "options" => []]
+    "editForm",  "dash::components.forms.edit", 
+    ["model", "url", "data" => [], "options" => []]
 );
 
 
@@ -34,10 +34,12 @@ Form::component(
 );
 
 
-Form::component('dashLabel', 'dash::components.forms.label', ["title", "name" => null]);
+Form::component('dashLabel',
+'dash::components.forms.label', ["title", "name" => null]);
 
 
-Form::component('dashClose', 'dash::components.forms.close', []);
+Form::component('dashClose',
+    'dash::components.forms.close', ['button_label', 'button_style', 'options']);
 
 
 
@@ -100,3 +102,4 @@ Form::component(
     'dash::components.forms.errors',
     ["name", 'title', "attributes", "value", ]
 );
+
