@@ -8,18 +8,9 @@
                 <section class="widgets">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="panel">
-                                <div class="panel-body">
-                                    <h3>{{ Html::dashIcons() }} User Admin</h3>
-                                    <hr>
-                                    {{ Html::dataTable($users, // users data
-                                    ["id", "name", "email", "created_at"], // columns (title)
-                                    ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], // options
-                                    ['class' => 'data-table'] // element attributes
-                                    )
-                                    }}
-                                </div>
-                            </div>
+                            @component("dash::components.panels.dashboard", ['title' => "User Admin"])
+                                {{ Html::dataTable($users, ["id", "name", "email", "created_at"],  ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], ['class' => 'data-table'] ) }}
+                            @endcomponent
                         </div>
                     </div>
                 </section>
@@ -28,11 +19,8 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-
-                            <aside class="panel">
-                                <div class="panel-body">
-                                    <h3>{{ Html::dashIcons() }} Simple Sidebar</h3>
-                                    <hr>
+                            <aside>
+                                @component("dash::components.panels.dashboard")
                                     <p>This template has a responsive menu toggling system. The menu will appear
                                         collapsed on smaller screens, and will appear non-collapsed on larger screens.
                                         When toggled using the button below, the menu will appear/disappear.
@@ -41,7 +29,7 @@
                                     <p>Make sure to keep all page content within the
                                         <code>#page-content-wrapper</code>.
                                     </p>
-                                </div>
+                                @endcomponent
                             </aside>
                         </div>
                     </div>
@@ -52,9 +40,9 @@
 
             <div class="col-md-3">
 
-                <div class="">
-                    {{ Html::dashWidget( [count($users) => "Registered Users"], 'Users') }}
-                </div>
+                @component("dash::components.panels.info", ["title" => "Users"])
+                   <h3>{{ count($users) }} Registered Users</h3>
+                @endcomponent
 
                 <aside class="panel">
 
