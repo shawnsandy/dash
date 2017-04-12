@@ -44,22 +44,15 @@
                    <h3>{{ count($users) }} Registered Users</h3>
                 @endcomponent
 
-                <aside class="panel">
+                @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
 
-                    <div class="panel-heading">
-                        <h4>{{ Html::dashIcons() }} Add New User</h4>
-                        <hr>
-                    </div>
 
-                    <div class="panel-body">
 
                         {{ config(["dash.forms.users.field_types.password" => "text"]) }}
 
                         {{ Form::createForm('App\User', "admin/users") }}
 
-                    </div>
-
-                </aside>
+                @endcomponent
 
             </div>
         </div>
