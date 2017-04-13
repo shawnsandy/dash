@@ -2,11 +2,6 @@
 @section('title', ':package_name')
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>Admin Control</h1>
-            </div>
-        </div>
 
         <div class="row">
             <!-- Dashboard content -->
@@ -16,15 +11,21 @@
                     <div class="row">
 
                         <div class="col-md-4">
-                            {{ Html::dashWidget( ["0" => "Pages"], 'Posts') }}
+                            @component("dash::components.panels.info", ["title" => "Env Settings"])
+                                <h3>0 Articles</h3>
+                            @endcomponent
                         </div>
 
                         <div class="col-md-4">
-                            {{ Html::dashWidget( ["33" => "Variables"], 'ENV SETTINGS') }}
+                            @component("dash::components.panels.info", ["title" => "Env Settings"])
+                                <h3>{{ count(Dash::getEnv()) }} ENV Variables</h3>
+                            @endcomponent
                         </div>
 
                         <div class="col-md-4">
-                            {{ Html::dashWidget( ["0" => "Pages"], 'System Errors') }}
+                            @component("dash::components.panels.info", ["title" => "System Logs"])
+                                <h3>{{ count(Dash::getLogs()) }} Items Logged</h3>
+                            @endcomponent
                         </div>
 
                     </div>
