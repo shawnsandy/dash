@@ -1,4 +1,4 @@
-<div class="panel panel-default component-panel">
+<div class="panel  component-panel">
     <div class="panel-body">
         <h2 class="component-panel-title">
             {{ Html::dashIcons((isset($icon)) ?  $icon : "circle-o") }}
