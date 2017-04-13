@@ -45,20 +45,18 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <aside class="panel">
-                                <div class="panel-body">
-                                    <h3>Simple Sidebar</h3>
-                                    <hr>
-                                    <p>This template has a responsive menu toggling system. The menu will appear
-                                        collapsed on smaller screens, and will appear non-collapsed on larger screens.
-                                        When toggled using the button below, the menu will appear/disappear.
-                                        On small screens, the page content will be pushed off canvas.
-                                    </p>
-                                    <p>Make sure to keep all page content within the
-                                        <code>#page-content-wrapper</code>.
-                                    </p>
-                                </div>
-                            </aside>
+
+                            @component("dash::components.panels.dashboard", ["title" => "Simple Sidebar"])
+
+                                <p>This template has a responsive menu toggling system. The menu will appear
+                                    collapsed on smaller screens, and will appear non-collapsed on larger screens.
+                                    When toggled using the button below, the menu will appear/disappear.
+                                    On small screens, the page content will be pushed off canvas.
+                                </p>
+                                <p>Make sure to keep all page content within the
+                                    <code>#page-content-wrapper</code>.
+                                </p>
+                            @endcomponent
                         </div>
                     </div>
 
@@ -69,10 +67,15 @@
             <!--  side bar -->
 
             <div class="col-md-3">
-
-                {{ Html::dashInfoWidget( ["Information" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, tempore."], 'System Errors') }}
-
-
+                @component("dash::components.panels.widget", ["title" => "Sidebar Widget"])
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis distinctio doloremque ducimus
+                        maiores recusandae! Aliquam aperiam asperiores culpa debitis distinctio dolor error eum fugiat
+                        hic illo illum ipsa laborum libero magni minima minus nam, nisi numquam, ratione rerum suscipit
+                        ullam ut vel! Animi aperiam aspernatur atque commodi, doloremque est ex excepturi hic, nostrum
+                        odio pariatur qui similique tempore unde vero.
+                    </p>
+                @endcomponent
             </div>
 
         </div>
