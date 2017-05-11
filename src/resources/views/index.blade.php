@@ -24,7 +24,7 @@
 
                         <div class="col-md-4">
                             @component("dash::components.panels.info", ["title" => "System Logs"])
-                                <h3>{{ count(Dash::getLogs()) }} Items Logged</h3>
+                                <h3>{{ count(Dash::getLogs()) }} Errors Logged</h3>
                             @endcomponent
                         </div>
 

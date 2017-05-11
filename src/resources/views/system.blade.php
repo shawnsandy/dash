@@ -10,7 +10,7 @@
                     <div class="panel">
                         <div class="panel-body">
                             <h2>{{ Html::dashIcons() }} .ENV Variables <span class="badge"> {{ count(Dash::getEnv()) }} </span></h2>
-                            <table class="table table-striped">
+                            <table class="table">
                                 @foreach(collect(Dash::getEnv()) as $env => $setting)
                                     <tr class="">
                                         <td class="col-md-3">
