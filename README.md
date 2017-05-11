@@ -48,11 +48,12 @@ __Add to config/app.php aliases array__
 __Dash Components__
 
 
-*Icons*
+*Icons based on font awesome*
 
 ``` blade
 
 {{ Html::dashIcons() }} 
+{{ Html::dashIcons("users") }} //icon name
 
 
 ```
@@ -75,6 +76,33 @@ __Dash Components__
 ``` blade
 
 {{ Form::createForm('App\User', "admin/users") }}
+
+```
+
+__Slot based components (Laravel 5.4^)__
+-------------------------------------------------------
+
+* **Info Panel**
+
+``` blade
+
+@component("dash::components.panels.info", ["title" => "Users", "icon" => "circle-o"])
+<h3>{{ count($users) }} Registered Users</h3>
+@endcomponent
+
+```
+
+* **Widget**
+
+``` php
+
+@component("dash::components.panels.widget", ["title" => "Add New User(s)"])
+
+        {{ config(["dash.forms.users.field_types.password" => "text"]) }}
+
+        {{ Form::createForm('App\User', "admin/users") }}
+
+@endcomponent
 
 ```
 

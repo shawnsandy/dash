@@ -17,5 +17,5 @@
     <a href="#"><i class="fa fa-sliders"></i> <span class="nav-text"> Settings</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-text"> System</span></a>
+    <a href="/admin/system"><i class="fa fa-cogs"></i> <span class="nav-text"> System</span></a>
 </li>

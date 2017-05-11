@@ -8,11 +8,37 @@
 
 namespace ShawnSandy\Dash;
 
+use Brotzka\DotenvEditor\DotenvEditor;
+use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
+
 class Dash
 {
+    protected $logs;
+
+    protected $settings;
+
+    protected $env;
+
+    public function __construct()
+    {
+
+        $this->logs = app(LaravelLogViewer::class);
+        $this->env = app(DotenvEditor::class);
+    }
 
     public function routes()
     {
         require __DIR__ . '/routes.php';
     }
+
+    public function getLogs()
+    {
+        return collect($this->logs->all());
+    }
+
+    public function getEnv()
+    {
+        return $this->env->getContent();
+    }
+
 }
