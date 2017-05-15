@@ -13,6 +13,6 @@ Quickly generate tables for you data-sets using the [jQyuery Datatables](//datat
 }}
 ```
 
-View the src [here](/src/resources/views/components/tables/data-table.blade.php)
+Code dive [view the src](/src/resources/views/components/tables/data-table.blade.php)
 
 __ScreenShot__
