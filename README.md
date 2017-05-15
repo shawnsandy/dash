@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Dash is a Laravel package that makes Admin / UI development easier. Warning it will not do **all of your crud work**, code is required. Enjoy! (Preview Release)
+Dash is a Laravel package that makes Admin / UI development easier. Warning it will not do **all of your crud work**, code is required. Enjoy! (Preview Release). [Read the full docs here](/docs).
 
 ## Install
 
@@ -105,6 +105,7 @@ __Slot based components (Laravel 5.4^)__
 @endcomponent
 
 ```
+[Read the full docs here](/docs).
 
 ## Change log
 
