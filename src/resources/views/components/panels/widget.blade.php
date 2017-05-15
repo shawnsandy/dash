@@ -1,14 +1,9 @@
 <aside class="panel {{ $class or "panel-component" }}">
 
-    <div class="panel-heading">
+    <div class="panel-body">
         <h4>{{ Html::dashIcons((isset($icon)) ?  $icon : "circle-o") }} {{ $title }}</h4>
         <hr>
-    </div>
-
-    <div class="panel-body">
-
         {{ $slot }}
-
     </div>
 
 </aside>

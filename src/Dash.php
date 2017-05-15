@@ -10,6 +10,7 @@ namespace ShawnSandy\Dash;
 
 use Brotzka\DotenvEditor\DotenvEditor;
 use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
+use ShawnSandy\Dash\Builder\GenerateFormsFields;
 
 class Dash
 {
@@ -39,6 +40,11 @@ class Dash
     public function getEnv()
     {
         return $this->env->getContent();
+    }
+
+    public function getFillables($model) {
+        $columns = app($model);
+        return $columns->getFillable();
     }
 
 }
