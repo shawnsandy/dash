@@ -1,8 +1,8 @@
-#DataTables Component
+# DataTables Component
 
-Quickly generate tables for you data-sets using the [jQyuery Datatables](//datatables.net) 
+Quickly generate tables for you data-sets using the [jQuery Datatables](//datatables.net) 
 
-###Usage
+### Usage
 
 ```blade
 {{ Html::dataTable($users, // users data
@@ -16,3 +16,4 @@ Quickly generate tables for you data-sets using the [jQyuery Datatables](//datat
 Code dive [view the src](/src/resources/views/components/tables/data-table.blade.php)
 
 __ScreenShot__
+

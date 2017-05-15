@@ -43,6 +43,14 @@ __Add to config/app.php aliases array__
 
 ```
 
+__Dash Routes__
+
+```php
+Route::group(['prefix' => 'admin'], function(){
+   Dash::routes();
+});
+```
+
 ## Usage
 
 __Dash Components__
