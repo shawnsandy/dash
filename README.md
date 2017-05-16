@@ -45,6 +45,8 @@ __Add to config/app.php aliases array__
 
 __Dash Routes__
 
+You can add dash route to your `routes\wep.php` which give you access to `dashboard, content, media, pages, system, users, settings` via `/admin`.  
+
 ```php
 Route::group(['prefix' => 'admin'], function(){
    Dash::routes();
@@ -55,7 +57,6 @@ Route::group(['prefix' => 'admin'], function(){
 
 __Dash Components__
 
-
 *Icons based on font awesome*
 
 ``` blade
@@ -63,9 +64,7 @@ __Dash Components__
 {{ Html::dashIcons() }} 
 {{ Html::dashIcons("users") }} //icon name
 
-
 ```
-
 
 *Data Table*
 
