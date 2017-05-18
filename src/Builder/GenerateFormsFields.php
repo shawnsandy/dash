@@ -33,7 +33,7 @@ class GenerateFormsFields
         $fields = collect($this->renderModelFields($model_path))->map(function ($type, $name) use ($table) {
             return $this->render(
                 config("dash.forms.$table.field_types." . $name, $type),
-                [$name, $name]
+                [$name, config("dash.forms.$table.labels." . $name, $name)]
             );
         });
 
@@ -60,7 +60,6 @@ class GenerateFormsFields
          */
     public function render($field, $array = [])
     {
-
         return $this->forms->render($field, $array);
     }
 

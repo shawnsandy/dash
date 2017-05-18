@@ -47,4 +47,10 @@ class Dash
         return $columns->getFillable();
     }
 
+    public function formLabels($table, $name, $type = 'text') {
+        return config("dash.forms.$table.field_types." . $name, $type);
+    }
+
+
+
 }
