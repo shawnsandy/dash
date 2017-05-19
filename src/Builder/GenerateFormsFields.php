@@ -163,8 +163,6 @@ class GenerateFormsFields
         $fields['textarea'] = ['text'];
         $fields['richtext'] = ['blob', 'mediumtext', 'longtext', 'blob'];
         $fields['select'] = ['bool'];
-        $fields['password'] = ["password"];
-        $fields['email'] = ["email"];
         $fields['time'] = ["time"];
         $fields['date'] = ['date'];
         $fields['datetime'] = ['datetime', 'timestamp'];

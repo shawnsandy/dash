@@ -56,11 +56,25 @@ You can use the Dash forms property to modify fields, title, and options on any 
  
  
 
-## Form config
+## Form config 
+
+__Field Types__
+
+By default field are types based on the default column types below 
+
+```php
+        $fields['text'] = ['string'];
+        $fields['textarea'] = ['text'];
+        $fields['richtext'] = ['blob', 'mediumtext', 'longtext'];
+        $fields['select'] = ['bool'];
+        $fields['time'] = ["time"];
+        $fields['date'] = ['date'];
+        $fields['datetime'] = ['datetime', 'timestamp'];
+```
 
 ### Set Config on the fly 
 
-To change a field from a text to password you will need to set the field type to password via a Laravel config option through `dash/config.php`. You can also set it on the fly in your controller of view. The example sets below sets the password field type on the users table to password. The second will set the text box to a file upload input.
+To change a field/input type from its default you will need to set the field type to password via a Laravel config option through `dash/config.php`. You can also set it on the fly in your controller or view. The example below sets the password field type on the users table to a password field/input. The second will set the text box input to a file upload field.
 
 ```blade
 {{ config(["dash.forms.users.field_types.password" => "password"]) }}
@@ -70,4 +84,3 @@ To change a field from a text to password you will need to set the field type to
 ```blade
 {{ config(["dash.forms.users.field_types.uploads" => "file"]) }}
 ```
-
