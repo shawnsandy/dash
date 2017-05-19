@@ -1,3 +1,3 @@
 @if (isset($errors) && $errors->has($name)) 
-<p class="alert alert-danger small">{{ $errors->first($name) }}</p>
+<p class="alert text-danger small">{{ $errors->first($name) }}</p>
  @endif

@@ -24,8 +24,8 @@ Form::macro('formLabel', function($label = "Label Me") {
 
 Form::macro("formError", function($name, $errors){
     $error = '';
-    if (isset($errors) && $errors->has($name))
-        $error = htmlString("<div class=\"alert alert-danger small\">{$errors->first($name)}</div>");
+    if ($errors->has($name))
+        $error = htmlString("<div class=\"alert text-danger small\">{$errors->first($name)}</div>");
     return $error ;
 });
 
