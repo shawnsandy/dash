@@ -4,13 +4,13 @@ Quickly Create Forms using Database table or Model fillable property.
 
 Create a basic form component that grabs the fillable fields from the User model `App\User.php` and render a user registration form.   
 
-- Create user registration form
+### Create user registration form
 
 ```blade
 {{ Form::createForm('App\User', "admin/users") }}
 ```
 
-Customize the form options
+### Customize the form options
 
 ```blade
 
@@ -29,7 +29,7 @@ Customize the form options
     <hr>
 ```
 
-- Edit form 
+### Edit form 
 
 ```blade
 {{ Form::createEditForm('App\User', "admin/users") }}
@@ -56,13 +56,18 @@ You can use the Dash forms property to modify fields, title, and options on any 
  
  
 
-- Form config
+## Form config
 
-- Set Config on the fly 
+### Set Config on the fly 
+
+To change a field from a text to password you will need to set the field type to password via a Laravel config option through `dash/config.php`. You can also set it on the fly in your controller of view. The example sets below sets the password field type on the users table to password. The second will set the text box to a file upload input.
 
 ```blade
-{{ config(["dash.forms.users.field_types.password" => "select"]) }}
+{{ config(["dash.forms.users.field_types.password" => "password"]) }}
 {{ Form::createForm('App\User', "admin/users") }}
 ```
 
-Sets the password type to a text box that is all it would take
+```blade
+{{ config(["dash.forms.users.field_types.uploads" => "file"]) }}
+```
+
