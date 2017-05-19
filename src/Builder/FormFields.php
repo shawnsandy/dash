@@ -49,59 +49,59 @@ class FormFields
         $this->class_selectors = $class_selectors;
     }
 
-    public function text($field_name, $value)
+    public function text($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashText($field_name, $value);
+        $field = Form::dashText($field_name, $value, $attributes);
         return $field;
     }
 
-    public function hidden($field_name, $value = null)
+    public function hidden($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashText($field_name, $value);
+        $field = Form::dashText($field_name, $value, $attributes);
         return $field;
     }
 
-    public function password($field_name, $value = null)
+    public function password($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashPassword($field_name, $value);
+        $field = Form::dashPassword($field_name, $value, $attributes);
         return $field;
     }
 
-    public function email($field_name, $value = null)
+    public function email($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashEmail($field_name, $value);
+        $field = Form::dashEmail($field_name, $value, $attributes);
         return $field;
     }
 
-    public function textarea($field_name, $value = null)
+    public function textarea($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashTextarea($field_name, $value);
+        $field = Form::dashTextarea($field_name, $value, $attributes);
         return $field;
     }
 
-    public function richtext($field_name, $value = null)
+    public function richtext($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashRichText($field_name, $value);
+        $field = Form::dashRichText($field_name, $value, $attributes);
         return $field;
     }
 
-    public function date($field_name, $value = null)
+    public function date($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashDate($field_name, $value);
-        return $field;
-    }
-
-
-    public function datetime($field_name, $value = null)
-    {
-        $field = Form::dashDateTime($field_name, $value);
+        $field = Form::dashDate($field_name, $value, $attributes);
         return $field;
     }
 
 
-    public function select($field_name, $value = null)
+    public function datetime($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashSelect($field_name, $value);
+        $field = Form::dashDateTime($field_name, $value, $attributes);
+        return $field;
+    }
+
+
+    public function select($field_name, $value = null, $attributes = [])
+    {
+        $field = Form::dashSelect($field_name, $value, $attributes);
         return $field;
     }
 
