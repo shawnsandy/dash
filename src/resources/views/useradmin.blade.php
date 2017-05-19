@@ -45,10 +45,7 @@
                 @endcomponent
 
                 @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
-
-                        {{ config(["dash.forms.users.field_types.password" => "select"]) }}
                         {{ Form::createForm('App\User', "admin/users") }}
-
                 @endcomponent
 
             </div>
