@@ -1,6 +1,5 @@
 <div class="form-group {{ $name }}">
-     {{ Form::dashLabel($title, $name)}}
+    {!! Form::formLabel($title)  !!}
     {{ Form::text($name, $value, array_merge(['class' => "form-control dash-date-time $name"], $attributes)) }}
-
+    {!! Form::formError($name, $errors) !!}
 </div>
-@include("dash::components.forms.errors", ["name" => $name])

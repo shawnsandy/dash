@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\HtmlString;
 
 /**
 * Created by PhpStorm.
@@ -7,6 +8,26 @@
 * Time: 1:24 AM
 */
 
+
+
+function htmlString($string) {
+    $htmlString = new HtmlString($string);
+    return $htmlString ;
+}
+
+Form::macro('formLabel', function($label = "Label Me") {
+    $label = htmlString("<label class=\" {$label} text-capitalize \" for=\" $label  \">{$label}</label>");
+    return   $label;
+
+});
+
+
+Form::macro("formError", function($name, $errors){
+    $error = '';
+    if ($errors->has($name))
+        $error = htmlString("<div class=\"alert text-danger small\">{$errors->first($name)}</div>");
+    return $error ;
+});
 
 Form::component(
     "createForm",  "dash::components.forms.create", 
@@ -108,4 +129,5 @@ Form::component(
     'dash::components.forms.errors',
     ["name", 'title', "attributes", "value", ]
 );
+
 

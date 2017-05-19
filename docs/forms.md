@@ -84,3 +84,6 @@ To change a field/input type from its default you will need to set the field typ
 ```blade
 {{ config(["dash.forms.users.field_types.uploads" => "file"]) }}
 ```
+
+##Customize From Components
+

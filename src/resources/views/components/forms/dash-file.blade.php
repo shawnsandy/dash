@@ -1,5 +1,5 @@
 <div class="form-group {{ $name }}">
-    {{ Form::dashLabel($title, $name)}}
+    {!! Form::formLabel($title)  !!}
     {{ Form::file($name) }}
+    {!! Form::formError($name, $errors) !!}
 </div>
-@include("dash::components.forms.errors", ["name" => $name])
