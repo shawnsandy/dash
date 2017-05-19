@@ -98,6 +98,12 @@ Form::component(
 );
 
 Form::component(
+    'dashFile',
+    'dash::components.forms.dash-file',
+    ["name", 'title' => 'Upload', "attributes" => [], "value", ]
+);
+
+Form::component(
     'error',
     'dash::components.forms.errors',
     ["name", 'title', "attributes", "value", ]
