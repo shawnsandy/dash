@@ -4,10 +4,29 @@ Quickly Create Forms using Database table or Model fillable property.
 
 Create a basic form component that grabs the fillable fields from the User model `App\User.php` and render a user registration form.   
 
-- Create form
+- Create user registration form
 
 ```blade
 {{ Form::createForm('App\User', "admin/users") }}
+```
+
+Customize the form options
+
+```blade
+
+    <hr>
+    {{ Form::open(["url" => '/admin/users']) }}
+
+    {{ Form::dashFields('App\User') }}
+    
+    <p class="text-right">
+        <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
+            Register Now
+        </button>
+    </p>
+
+    {{ Form::close() }}
+    <hr>
 ```
 
 - Edit form 
