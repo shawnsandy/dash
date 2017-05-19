@@ -1,15 +1,14 @@
 @if (count($errors) > 0)
 
     <div>
-        @foreach ($errors->all() as $error)
 
-            <p class="alert alert-danger alert-dismissible">{{ $error }}.....
+            <p class="alert alert-danger alert-dismissible">
+                Opps! There was an error processing your submission, please review the form and submit again.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </p>
 
-        @endforeach
     </div>
 
 @endif
