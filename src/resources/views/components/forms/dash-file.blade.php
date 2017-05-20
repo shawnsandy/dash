@@ -1,9 +1,9 @@
 <div class="form-group">
     <div class="clearfix">
-        <label for="{{ $name }}">{{ $title }}</label>
-        <div class="{{ $name }} file-input-box" style="">
+        {!! Form::formLabel($title)  !!}
+        <div class="{{ $attributes["data-table"] or '' }} {{ $name }} file-input-box" style="">
 
-            <p class="file-label small" style="">UPLOAD FILE : <span class="file-upload-name"></span></p>
+            <p class="file-label small" style="">Upload {{ $name }} : <span class="file-upload-name"></span></p>
             <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style=""/>
         </div>
         {!! Form::formError($name, $errors) !!}
@@ -14,7 +14,7 @@
 <style>
     .file-input-box {
         position: relative;
-        min-height: 40px;
+        min-height: 20px;
         padding: 10px;
         background-color: lightgray;
 
@@ -25,17 +25,15 @@
         height: 100%;
         height: inherit;
         margin: 0;
-        padding: 10px;
     }
 
     .file-input-box [type=file] {
-        min-height: 30px;
+        min-height: 20px;
         float: left;
         opacity: 0;
         position: absolute;
         top: 0;
         bottom: 0;
-        padding: 10px;
 
     }
 </style>

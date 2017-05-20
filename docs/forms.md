@@ -87,7 +87,7 @@ To change a field/input type from its default you will need to set the field typ
 
 ### Styling the file upload component 
 
-To enable custom styles on the file upload component you can add a `@stack('scripts')` and` @stack('scripts')`  *recommend* to your blade file or copy and paste the following to your css/js code into you blade template.
+To enable custom styles on the file upload component you can add a `@stack('scripts')` and` @stack('scripts')`  *recommend* to your blade file or copy and paste the following to your css/js snippet into you stylesheet, js file or blade template.
 
 The css
 
