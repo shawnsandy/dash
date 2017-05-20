@@ -1,6 +1,6 @@
 <div class="form-group">
     <div class="clearfix">
-        <label for="{{ $name }}">{{ $title }}</label>
+        {!! Form::formLabel($title)  !!}
         <div class="{{ $attributes["data-table"] or '' }} {{ $name }} file-input-box" style="">
 
             <p class="file-label small" style="">Upload {{ $name }} : <span class="file-upload-name"></span></p>
