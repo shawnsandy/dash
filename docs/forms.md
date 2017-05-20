@@ -85,5 +85,62 @@ To change a field/input type from its default you will need to set the field typ
 {{ config(["dash.forms.users.field_types.uploads" => "file"]) }}
 ```
 
+### Styling the file upload component 
+
+To enable custom styles on the file upload component you can add a `@stack('scripts')` and` @stack('scripts')`  *recommend* to your blade file or copy and paste the following to your css/js code into you blade template.
+
+The css
+
+```css
+   .file-input-box {
+        position: relative;
+        font-size: 18px;
+        width: 100%;
+        min-height: 40px;
+        padding: 10px
+
+    }
+
+    .file-label {
+        display: block;
+        height: 100%;
+        height: inherit;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .file-input-box [type=file] {
+        min-height: 30px;
+        float: left;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        padding: 10px;
+
+    }
+```
+
+The js (jquery)
+
+```javascript
+
+    $(document).ready(function() {
+        $(".file-upload").each(function(){
+            var file = $(this);
+
+            $(file).change(function(e) {
+                var upload_file = $(file).val();
+                var file_name = upload_file.replace("C:\\fakepath\\", '');
+                console.log("changed" + ' ' + upload_file + ' '+ file_name);
+                $(".file-upload-name").html(file_name);
+            });
+
+        });
+    });
+
+```
+
 ##Customize From Components
+
+
 

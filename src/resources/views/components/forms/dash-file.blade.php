@@ -1,6 +1,6 @@
 <div class="row">
     <div class="form-group {{ $name }} file-input-box" style="">
-        <p class="file-label text-center" style="">{{ $title }} <span class="file-upload-name"></span></p>
+        <p class="file-label" style="">{{ $title }} <span class="file-upload-name"></span></p>
         <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style=""/>
     </div>
     {!! Form::formError($name, $errors) !!}
