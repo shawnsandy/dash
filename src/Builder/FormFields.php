@@ -105,9 +105,9 @@ class FormFields
         return $field;
     }
 
-    public function file($field_name)
+    public function file($field_name, $value = null, $attributes = [])
     {
-        $field = Form::dashFile($field_name);
+        $field = Form::dashFile($field_name, $value, $attributes);
         return $field;
     }
 }
