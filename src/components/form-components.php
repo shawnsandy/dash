@@ -16,7 +16,8 @@ function htmlString($string) {
 }
 
 Form::macro('formLabel', function($label = "Label Me") {
-    $label = htmlString("<label class=\" {$label} text-capitalize \" for=\" $label  \">{$label}</label>");
+    $display_name = str_replace("_", " ", $label);
+    $label = htmlString("<label class=\" {$label} text-capitalize \" for=\" $label  \">{$display_name}</label>");
     return   $label;
 
 });
