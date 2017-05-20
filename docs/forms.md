@@ -115,6 +115,7 @@ The css
         opacity: 0;
         position: absolute;
         top: 0;
+        bottom: 0;
         padding: 10px;
 
     }
