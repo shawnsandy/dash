@@ -14,7 +14,7 @@
 <style>
     .file-input-box {
         position: relative;
-        min-height: 40px;
+        min-height: 20px;
         padding: 10px;
         background-color: lightgray;
 
@@ -29,7 +29,7 @@
     }
 
     .file-input-box [type=file] {
-        min-height: 30px;
+        min-height: 20px;
         float: left;
         opacity: 0;
         position: absolute;
