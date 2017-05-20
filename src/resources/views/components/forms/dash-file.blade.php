@@ -1,19 +1,22 @@
-<div class="row">
-    <div class="form-group {{ $name }} file-input-box" style="">
-        <p class="file-label" style="">{{ $title }} <span class="file-upload-name"></span></p>
-        <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style=""/>
-    </div>
-    {!! Form::formError($name, $errors) !!}
+<div class="form-group">
+    <div class="clearfix">
+        <label for="{{ $name }}">{{ $title }}</label>
+        <div class="{{ $name }} file-input-box" style="">
 
+            <p class="file-label small" style="">UPLOAD FILE : <span class="file-upload-name"></span></p>
+            <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style=""/>
+        </div>
+        {!! Form::formError($name, $errors) !!}
+    </div>
 </div>
+
 @push('styles')
 <style>
     .file-input-box {
         position: relative;
-        font-size: 18px;
-        width: 100%;
         min-height: 40px;
-        padding: 10px
+        padding: 10px;
+        background-color: lightgray;
 
     }
 
@@ -39,14 +42,14 @@
 @endpush
 @push('scripts')
 <script>
-    $(document).ready(function() {
-        $(".file-upload").each(function(){
+    $(document).ready(function () {
+        $(".file-upload").each(function () {
             var file = $(this);
 
-            $(file).change(function(e) {
+            $(file).change(function (e) {
                 var upload_file = $(file).val();
                 var file_name = upload_file.replace("C:\\fakepath\\", '');
-                console.log("changed" + ' ' + upload_file + ' '+ file_name);
+                console.log("changed" + ' ' + upload_file + ' ' + file_name);
                 $(".file-upload-name").html(file_name);
             });
 
