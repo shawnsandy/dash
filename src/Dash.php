@@ -9,6 +9,7 @@
 namespace ShawnSandy\Dash;
 
 use Brotzka\DotenvEditor\DotenvEditor;
+use Illuminate\Support\HtmlString;
 use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
 use ShawnSandy\Dash\Builder\GenerateFormsFields;
 
@@ -51,6 +52,9 @@ class Dash
         return config("dash.forms.$table.field_types." . $name, $type);
     }
 
-
+    public function htmlString($string) {
+        $htmlString = new HtmlString($string);
+        return $htmlString ;
+    }
 
 }
