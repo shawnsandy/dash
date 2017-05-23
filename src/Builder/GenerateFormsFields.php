@@ -105,16 +105,13 @@ class GenerateFormsFields
 
         $fields = $this->getColumnsFromTable($table_name);
         $results = $this->buildFields($fields);
-
         return $results;
     }
 
     public function renderModelFields($db_model)
     {
-
         $fields = $this->getColumnsFromModel($db_model);
         $results = $this->buildFields($fields);
-
         return $results;
     }
 
