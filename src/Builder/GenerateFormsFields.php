@@ -1,16 +1,16 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Shawn
-     * Date: 3/11/2017
-     * Time: 5:16 PM
-     */
+/**
+ * Created by PhpStorm.
+ * User: Shawn
+ * Date: 3/11/2017
+ * Time: 5:16 PM
+ */
 
-    namespace ShawnSandy\Dash\Builder;
+namespace ShawnSandy\Dash\Builder;
 
-    use App\User;
-    use Collective\Html\FormBuilder;
-    use Schema;
+use App\User;
+use Collective\Html\FormBuilder;
+use Schema;
 
 class GenerateFormsFields
 {
@@ -36,7 +36,7 @@ class GenerateFormsFields
                 [
                     $name,
                     config("dash.forms.$table.labels." . $name, $name),
-                   ["data-table" =>  $table],
+                    ["data-table" => $table],
                 ]
             );
         });
@@ -50,7 +50,11 @@ class GenerateFormsFields
         $fields = collect($this->renderTableFields($table))->map(function ($type, $name) use ($table) {
             return $this->render(
                 config("dash.forms.$table.field_types." . $name, $type),
-                [$name, "User {$name}"]
+                [
+                    $name,
+                    config("dash.forms.$table.labels." . $name, $name),
+                    ['data-table' => $table]
+                ]
             );
         });
 
@@ -58,42 +62,64 @@ class GenerateFormsFields
     }
 
     /**
-         * @param       $field
-         * @param array $array
-         * @return mixed
-         */
+     * Build fields from array
+     *
+     * @param array $form_fields [field_name => [label => Text field, type => password ]
+     * @param string $config_name
+     * @return mixed
+     */
+    public function buildCustomFields($form_fields = [], $config_name = 'custom_form')
+    {
+        $fields = collect($form_fields)->map(function ($field, $name) use ($config_name) {
+            return $this->render(
+                isset($field['type']) ? $field['type'] : 'text',
+                [
+                    $name,
+                    $field['label'],
+                    ['data-table' => $config_name]
+                ]
+            );
+
+        });
+
+        return $fields ;
+
+    }
+
+    /**
+     * @param       $field
+     * @param array $array
+     * @return mixed
+     */
     public function render($field, $array = [])
     {
         return $this->forms->render($field, $array);
     }
 
     /**
-         * @param $table_name
-         * @return static
-         */
+     * @param $table_name
+     * @return static
+     */
     public function renderTableFields($table_name)
     {
 
         $fields = $this->getColumnsFromTable($table_name);
         $results = $this->buildFields($fields);
-
         return $results;
     }
 
     public function renderModelFields($db_model)
     {
-
         $fields = $this->getColumnsFromModel($db_model);
         $results = $this->buildFields($fields);
-
         return $results;
     }
 
 
     /**
-         * @param $fields
-         * @return array|mixed|collections
-         */
+     * @param $fields
+     * @return array|mixed|collections
+     */
     public function buildFields($fields)
     {
         $results = collect($fields)->flatMap(function ($items, $key) {
@@ -104,9 +130,9 @@ class GenerateFormsFields
     }
 
     /**
-         * @param $table_name
-         * @return mixed
-         */
+     * @param $table_name
+     * @return mixed
+     */
     public function getColumnsFromTable($table_name)
     {
         $tables = Schema::getColumnListing($table_name);
@@ -125,10 +151,10 @@ class GenerateFormsFields
 
 
     /**
-         * @param array $columns
-         * @param       $table
-         * @return mixed
-         */
+     * @param array $columns
+     * @param       $table
+     * @return mixed
+     */
     public function mapColumnsToFieldType(array $columns, $table)
     {
 

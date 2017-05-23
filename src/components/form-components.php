@@ -1,5 +1,4 @@
 <?php
-use Illuminate\Support\HtmlString;
 
 /**
 * Created by PhpStorm.
@@ -8,16 +7,9 @@ use Illuminate\Support\HtmlString;
 * Time: 1:24 AM
 */
 
-
-
-function htmlString($string) {
-    $htmlString = new HtmlString($string);
-    return $htmlString ;
-}
-
 Form::macro('formLabel', function($label = "Label Me") {
     $display_name = str_replace("_", " ", $label);
-    $label = htmlString("<label class=\" {$label} text-capitalize \" for=\" $label  \">{$display_name}</label>");
+    $label = Dash::htmlString("<label class=\" {$label} text-capitalize \" for=\" $label  \">{$display_name}</label>");
     return   $label;
 
 });
@@ -53,6 +45,12 @@ Form::component(
     'dashFields',
     'dash::components.forms.fields',
     ["model" => ""]
+);
+
+Form::component(
+    'dashCustomFields',
+    'dash::components.forms.custom',
+    ["custom_fields" => []]
 );
 
 

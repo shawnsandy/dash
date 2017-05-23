@@ -16,6 +16,7 @@
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    {!! Html::entypoStylesheet() !!}
 @stack("styles")
 <!-- Bootstrap Core CSS -->
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
@@ -41,7 +42,7 @@
                     <i class="fa fa-ellipsis-h"></i> <span class="nav-text"> Dash</span>
                 </a>
             </li>
-           @include("dash::partials.sidebar-menu")
+            @include("dash::partials.sidebar-menu")
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -68,7 +69,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                       {{-- navbar here --}}
+                        {{-- navbar here --}}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -91,7 +92,6 @@
 
 
         <!-- Page Content -->
-
 
 
         <main>

@@ -56,6 +56,18 @@
                                 <p>Make sure to keep all page content within the
                                     <code>#page-content-wrapper</code>.
                                 </p>
+                                <hr>
+                            <h3>Custom Froms</h3>
+                                <?php
+                                $custom_form = [
+                                    "name" => ["label" => "Your Name"],
+                                    "address" => ['label' => "Your Address", "type" => "textarea"],
+                                    "password" => ['label' => "Password", "type" => "password"]
+                                ]
+                                ?>
+
+                                {{ Form::dashCustomFields($custom_form) }}
+
                             @endcomponent
                         </div>
                     </div>
