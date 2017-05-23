@@ -35,6 +35,13 @@ class DashServicesProvider extends ServiceProvider
             'dash-views'
         );
 
+        $this->publishes(
+            [
+                __DIR__ . '/resources/views' => resource_path('views/theme/dash'),
+            ],
+            'dash-theme'
+        );
+
         /**
          * Package assets
          */
