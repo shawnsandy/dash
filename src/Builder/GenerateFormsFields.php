@@ -68,7 +68,7 @@ class GenerateFormsFields
      * @param string $config_name
      * @return mixed
      */
-    public function buildCustomFields($form_fields = [], $config_name = '')
+    public function buildCustomFields($form_fields = [], $config_name = 'custom_form')
     {
         $fields = collect($form_fields)->map(function ($field, $name) use ($config_name) {
             return $this->render(

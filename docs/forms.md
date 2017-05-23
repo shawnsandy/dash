@@ -141,7 +141,33 @@ The js (jquery)
 
 ```
 
-##Customize From Components
+### Custom form 
+
+```php
+<?php
+$custom_form = [
+    "name" => ["label" => "Your Name"],
+    "address" => ['label' => "Your Address", "type" => "textarea"],
+    "password" => ['label' => "Password", "type" => "password"]
+]
+?>
+```
+
+Render using `@foreach` 
+
+```blade
+@foreach(DashForms::buildCustomFields($custom_form) as $field)
+    {{ $field }}
+@endforeach
+```
+
+Or render using a from `dashCustomFields()` component 
+
+```blade
+{{ Form::dashCustomFields($custom_form) }}
+```
+
+## Customize From Components
 
 
 

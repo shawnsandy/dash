@@ -47,6 +47,12 @@ Form::component(
     ["model" => ""]
 );
 
+Form::component(
+    'dashCustomFields',
+    'dash::components.forms.custom',
+    ["custom_fields" => []]
+);
+
 
 Form::component('dashLabel',
 'dash::components.forms.label', ["title", "name" => null]);
