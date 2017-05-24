@@ -99,6 +99,13 @@ class FormFields
     }
 
 
+    public function time($field_name, $value = null, $attributes = [])
+    {
+        $field = Form::dashTime($field_name, $value, $attributes);
+        return $field;
+    }
+
+
     public function select($field_name, $value = null, $attributes = [])
     {
         $field = Form::dashSelect($field_name, $value, $attributes);
