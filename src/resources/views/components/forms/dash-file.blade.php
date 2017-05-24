@@ -25,6 +25,7 @@
         height: 100%;
         height: inherit;
         margin: 0;
+        text-align: center;
     }
 
     .file-input-box [type=file] {
