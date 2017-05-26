@@ -32,10 +32,10 @@ class GenerateFormsFields
         $table = $model->getTable();
         $fields = collect($this->renderModelFields($model_path))->map(function ($type, $name) use ($table) {
             return $this->render(
-                config("dash.forms.$table.field_types." . $name, $type),
+                config("forms.$table.field_types." . $name, $type),
                 [
                     $name,
-                    config("dash.forms.$table.labels." . $name, $name),
+                    config("forms.$table.labels." . $name, $name),
                     ["data-table" => $table],
                 ]
             );
@@ -49,10 +49,10 @@ class GenerateFormsFields
 
         $fields = collect($this->renderTableFields($table))->map(function ($type, $name) use ($table) {
             return $this->render(
-                config("dash.forms.$table.field_types." . $name, $type),
+                config("forms.$table.field_types." . $name, $type),
                 [
                     $name,
-                    config("dash.forms.$table.labels." . $name, $name),
+                    config("forms.$table.labels." . $name, $name),
                     ['data-table' => $table]
                 ]
             );
