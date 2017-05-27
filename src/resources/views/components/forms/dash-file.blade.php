@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="form-group {{ $name }} {{ $errors->first($name, "has-error") }}">
     <div class="clearfix">
         {!! Form::formLabel($title)  !!}
         <div class="{{ $attributes["data-table"] or '' }} {{ $name }} file-input-box" style="">
