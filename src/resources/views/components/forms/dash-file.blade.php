@@ -6,7 +6,7 @@
             <p class="file-label small" style="">Upload {{ str_replace("_", " ", $name )}} : <span class="file-upload-name"></span></p>
             <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style=""/>
         </div>
-        {!! Form::formError($name, $errors) !!}
+        {!! $errors->first($name, '<p class="text-danger">:message</p>') !!}
     </div>
 </div>
 
