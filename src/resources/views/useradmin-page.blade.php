@@ -1,4 +1,4 @@
-@extends("dash::layouts.layout")
+@extends($theme."layouts.layout")
 @section('title', ':package_name')
 @section('content')
     <div class="container-fluid">
