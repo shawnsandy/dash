@@ -68,6 +68,8 @@ class DashServicesProvider extends ServiceProvider
 
         include_once __DIR__ ."/components/html-components.php";
         include_once __DIR__ ."/components/form-components.php";
+
+        $this->themeDefaults();
     }
 
     /**
@@ -94,5 +96,34 @@ class DashServicesProvider extends ServiceProvider
         $this->app->bind(GenerateFormFieldsFacade::class, function () {
             return new GenerateFields();
         });
+
+
     }
+
+
+    /**
+     * get the default theme
+     */
+    public function themeDefaults()
+    {
+
+        view()->composer(["*"], function ($view) {
+            /* get the theme if set in config */
+            $theme = config("dash.theme", null);
+            /* if not theme is set in the config */
+            /* check the theme folder if exist or use the theme in package*/
+            if (!$theme):
+                if (view()->exists("theme.dash.index")):
+                    $theme = "theme.dash.";
+                else :
+                    $theme = "dash::";
+                endif;
+            endif;
+            view()->share('theme', $theme);
+
+        });
+
+    }
+
+
 }
