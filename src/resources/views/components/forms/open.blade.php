@@ -3,4 +3,3 @@
 @else
     {{ Form::open($options) }}
 @endif
-
