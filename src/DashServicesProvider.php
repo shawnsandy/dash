@@ -107,7 +107,7 @@ class DashServicesProvider extends ServiceProvider
     public function themeDefaults()
     {
 
-        view()->composer(["*"], function ($view) {
+        view()->composer("*", function ($view) {
             /* get the theme if set in config */
             $theme = config("dash.theme", null);
             /* if not theme is set in the config */
@@ -119,7 +119,7 @@ class DashServicesProvider extends ServiceProvider
                     $theme = "dash::";
                 endif;
             endif;
-            view()->share('theme', $theme);
+            view()->share('dashTheme', $theme);
 
         });
 
