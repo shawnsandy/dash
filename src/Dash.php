@@ -33,6 +33,11 @@ class Dash
         require __DIR__ . '/routes.php';
     }
 
+    public function components() {
+        include_once __DIR__ ."/components/html-components.php";
+        include_once __DIR__ ."/components/form-components.php";
+    }
+
     public function getLogs()
     {
         return collect($this->logs->all());
