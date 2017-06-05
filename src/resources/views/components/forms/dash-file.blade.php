@@ -1,12 +1,15 @@
-<div class="form-group">
+@php
+    $required =  (config("forms.".$attributes["data-table"].".required.".$name, null ) ) ? "required" : null ;
+@endphp
+<div class="form-group {{ $name }} {{ $required }} {{ $errors->first($name, "has-error") }}">
     <div class="clearfix">
         {!! Form::formLabel($title)  !!}
         <div class="{{ $attributes["data-table"] or '' }} {{ $name }} file-input-box" style="">
 
             <p class="file-label small" style="">Upload {{ str_replace("_", " ", $name )}} : <span class="file-upload-name"></span></p>
-            <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style=""/>
+            <input type="file" name="{{ $name }}" id="{{ $name }}" class="file-upload" style="" {{ $required }}/>
         </div>
-        {!! Form::formError($name, $errors) !!}
+        {!! $errors->first($name, '<p class="text-danger">:message</p>') !!}
     </div>
 </div>
 
