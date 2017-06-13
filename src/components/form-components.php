@@ -27,7 +27,6 @@ Form::component(
     ["model", "url", "data" => [], "options" => []]
 );
 
-
 Form::component(
     "editForm",  "dash::components.forms.edit", 
     ["model", "url", "data" => [], "options" => []]
@@ -120,7 +119,7 @@ Form::component(
 Form::component(
     'dashFile',
     'dash::components.forms.dash-file',
-    ["name", 'title' => 'Upload', "attributes" => [], "value", ]
+    ["name", 'title', "attributes" => [], "value", ]
 );
 
 Form::component(
