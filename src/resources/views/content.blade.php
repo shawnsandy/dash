@@ -63,13 +63,6 @@
                     <div class="row">
 
                         <div class="col-md-12">
-                            <div class="panel">
-                                <div class="panel-body">
-                                    <p>
-                                        Commodi ea esse provident quidem quod? Aliquam, architecto eum ex facilis nisi sequi tempora? Dolor, doloremque et exercitationem neque officia reiciendis unde.
-                                    </p>
-                                </div>
-                            </div>
 
                             <div class="panel panel-default">
                                 <div class="panel-heading lead">
