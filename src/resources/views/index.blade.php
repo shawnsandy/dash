@@ -32,16 +32,19 @@
 
                     <div class="row">
 
+                        <hr>
+
                         <div class="col-md-12">
 
-                            @include("dashelements::components.table", ["data" => \App\User::all() ])
+                            @component("dashelements::components.collection-table", ["data" => \App\User::all() ])
+                                <a href="/">View</a>
+                            @endcomponent
 
+                            @component("dashelements::components.logout-btn")
+                                Logout Now
+                            @endcomponent
 
-
-                        @component("dashelements::components.logout-btn")
-                        Logout Now
-                        @endcomponent
-
+                            <hr>
 
                         </div>
 
@@ -65,7 +68,7 @@
                                     <code>#page-content-wrapper</code>.
                                 </p>
                                 <hr>
-                            <h3>Custom Froms</h3>
+                                <h3>Custom Froms</h3>
                                 <?php
                                 $custom_form = [
                                     "name" => ["label" => "Your Name"],
