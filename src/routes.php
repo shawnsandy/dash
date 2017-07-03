@@ -11,7 +11,7 @@
 
 Route::get("/", '\ShawnSandy\Dash\App\Dash\DashController');
 
-Route::get("content", '\ShawnSandy\Dash\App\Content\ContentController');
+Route::resource("content", '\ShawnSandy\Dash\App\Content\ContentController');
 
 Route::get("media", '\ShawnSandy\Dash\App\Media\MediaController');
 
