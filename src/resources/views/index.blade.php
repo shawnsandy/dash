@@ -34,6 +34,14 @@
 
                         <div class="col-md-12">
 
+                            @include("dashelements::components.table", ["data" => \App\User::all() ])
+
+
+
+                        @component("dashelements::components.logout-btn")
+                        Logout Now
+                        @endcomponent
+
 
                         </div>
 
