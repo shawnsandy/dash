@@ -65,9 +65,11 @@
 
                             <hr>
 
-                            @component("dashelements::components.data-table", ['data' => $data ])
-
-                            @endcomponent
+                            <div class="main-panel">
+                                @component("dashelements::components.panel")
+                                    @include("dashelements::elements.data-table", ['data' => $data ])
+                                @endcomponent
+                            </div>
 
                             <hr>
                         </div>
