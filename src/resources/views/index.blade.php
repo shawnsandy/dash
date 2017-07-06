@@ -65,8 +65,13 @@
 
                             <hr>
 
+                            @component("dashelements::components.data-table", ['data' => $data ])
 
+                            @endcomponent
+
+                            <hr>
                         </div>
+
 
                     </div>
 
