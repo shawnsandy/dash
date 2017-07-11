@@ -17,19 +17,21 @@ class ContentController extends Controller
 
     public function index()
     {
-        return view("dash::content");
+
+        $content = Blueline::select(["id", "title", "created_at"])->desc()->get();
+        return view("dash::content.index", compact("content"));
     }
 
     public function create()
     {
-
+        return view("dash::content.create-content");
     }
 
     public function edit(Blueline $content)
     {
 
         $content->load("categories", "tags");
-        return view("dash::");
+        return view("dash::content.edit-content", compact("content"));
 
     }
 

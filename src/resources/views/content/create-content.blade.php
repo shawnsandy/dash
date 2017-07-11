@@ -1,9 +1,7 @@
 @extends($dashTheme."layouts.layout")
-@section('title', 'Edit Post')
+@section('title', ':package_name')
 @section('content')
     <div class="container-fluid">
-
-
 
         <div class="row">
             <!-- Dashboard content -->
@@ -12,11 +10,8 @@
                 <section>
                     <div class="row">
                         <div class="col-lg-12">
-                            @component("dashelements::components.panel", ["heading" => 'h2'])
-                                @slot("title")
-                                    Edit Post
-                                @endslot
-                                {{ Form::model($content, ["url" => "/bluelines/posts/$content->id", "method" => "put", "files" => true]) }}
+                            @component("dashelements::components.panel", ["heading" => 'h2', "title" => "New Posts"])
+                                {{ Form::open( ["url" => "/bluelines/posts", "files" => true]) }}
 
                                 @include("bluelines::partials.forms.post")
 

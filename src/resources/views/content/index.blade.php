@@ -1,29 +1,49 @@
 @extends($dashTheme."layouts.layout")
-@section('title', 'Edit Post')
+@section('title', 'Content admin')
 @section('content')
     <div class="container-fluid">
-
-
 
         <div class="row">
             <!-- Dashboard content -->
             <div class="col-md-9">
 
+                <section class="widgets">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            @component("dashelements::components.panel", ["heading" => 'h2', "title" => "Manage Content"])
+
+                                @include("dashelements::elements.data-table", ["data" => $content])
+
+                            @endcomponent
+
+                        </div>
+
+                    </div>
+
+                </section>
+
                 <section>
+
                     <div class="row">
                         <div class="col-lg-12">
-                            @component("dashelements::components.panel", ["heading" => 'h2'])
-                                @slot("title")
-                                    Edit Post
-                                @endslot
-                                {{ Form::model($content, ["url" => "/bluelines/posts/$content->id", "method" => "put", "files" => true]) }}
 
-                                @include("bluelines::partials.forms.post")
-
-                                {{ Form::close() }}
-
-                                {{ Html::ckeditor() }}
-                            @endcomponent
+                            <aside class="panel">
+                                <div class="panel-body">
+                                    <h3>Simple Sidebar</h3>
+                                    <hr>
+                                    <p>This template has a responsive menu toggling system. The menu will appear
+                                        collapsed on smaller screens, and will appear non-collapsed on larger screens.
+                                        When toggled using the button below, the menu will appear/disappear.
+                                        On small screens, the page content will be pushed off canvas.
+                                    </p>
+                                    <p>Make sure to keep all page content within the
+                                        <code>#page-content-wrapper</code>.
+                                    </p>
+                                </div>
+                            </aside>
                         </div>
                     </div>
 
