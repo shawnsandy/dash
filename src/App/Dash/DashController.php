@@ -16,7 +16,6 @@ class DashController extends Controller
 
     public function __invoke()
     {
-
         return view("dash::index");
     }
 }

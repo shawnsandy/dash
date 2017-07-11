@@ -1,5 +1,5 @@
 @extends($dashTheme."layouts.layout")
-@section('title', ':package_name')
+@section('title', 'Dash Content admin')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -63,25 +63,12 @@
                     <div class="row">
 
                         <div class="col-md-12">
-                            <div class="panel">
-                                <div class="panel-body">
-                                    <p>
-                                        Commodi ea esse provident quidem quod? Aliquam, architecto eum ex facilis nisi sequi tempora? Dolor, doloremque et exercitationem neque officia reiciendis unde.
-                                    </p>
-                                </div>
-                            </div>
 
                             <div class="panel panel-default">
                                 <div class="panel-heading lead">
                                     Data Collections
                                 </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item">Cras justo odio</li>
-                                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                                    <li class="list-group-item">Morbi leo risus</li>
-                                    <li class="list-group-item">Porta ac consectetur ac</li>
-                                    <li class="list-group-item">Vestibulum at eros</li>
-                                </ul>
+                              @include("bluelines::components.recent-content")
                             </div>
                         </div>
 

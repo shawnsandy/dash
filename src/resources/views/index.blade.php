@@ -32,10 +32,48 @@
 
                     <div class="row">
 
+                        <hr>
+
                         <div class="col-md-12">
 
+                            @php $data = \App\User::all() @endphp
 
+                            @component("dashelements::components.collection-table", ['data' => $data ])
+
+                                @slot('table_rows')
+                                    @foreach($data as $rows)
+                                        <tr>
+                                            <td>{{ $rows->id }}</td>
+                                            <td>{{ $rows->name }}</td>
+                                            <td>{{ $rows->email }}</td>
+                                            <td>{{ $rows->created_at }}</td>
+                                            <td>{{ $rows->updated_at }}</td>
+                                            <td>{{ $rows->avatar }}</td>
+                                            <td>{{ $rows->role_id }}</td>
+                                            <td><a href="/{{$rows->role_id }}/edit">Edit</a></td>
+                                        </tr>
+                                    @endforeach
+
+
+                                @endslot
+
+                            @endcomponent
+
+                            @component("dashelements::components.logout-btn")
+                                Logout Now
+                            @endcomponent
+
+                            <hr>
+
+                            <div class="main-panel">
+                                @component("dashelements::components.panel")
+                                    @include("dashelements::elements.data-table", ['data' => $data ])
+                                @endcomponent
+                            </div>
+
+                            <hr>
                         </div>
+
 
                     </div>
 
@@ -57,7 +95,7 @@
                                     <code>#page-content-wrapper</code>.
                                 </p>
                                 <hr>
-                            <h3>Custom Froms</h3>
+                                <h3>Custom Froms</h3>
                                 <?php
                                 $custom_form = [
                                     "name" => ["label" => "Your Name"],
