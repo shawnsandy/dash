@@ -2,10 +2,10 @@
     <a href="/admin"><i class="fa fa-tachometer"></i> <span class="nav-text">Dashboard</span></a>
 </li>
 <li>
-    <a href="/admin/content"><i class="fa fa-pencil-square"></i> <span class="nav-text"> Articles</span></a>
+    <a href="/admin/content"><i class="fa fa-file-text"></i> <span class="nav-text"> Post</span></a>
 </li>
 <li>
-    <a href="/admin/pages"><i class="fa fa-file-text"></i> <span class="nav-text"> Pages</span></a>
+    <a href="/admin/pages"><i class="fa fa-file"></i> <span class="nav-text"> Pages</span></a>
 </li>
 <li>
     <a href="/admin/media"><i class="fa fa-download"></i> <span class="nav-text"> Media</span></a>
