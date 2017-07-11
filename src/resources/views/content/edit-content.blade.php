@@ -2,14 +2,8 @@
 @section('title', ':package_name')
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-md-12">
-                <h1>Manage Content</h1>
-            </div>
 
 
-        </div>
 
         <div class="row">
             <!-- Dashboard content -->
@@ -18,7 +12,10 @@
                 <section>
                     <div class="row">
                         <div class="col-lg-12">
-                            @component("dashelements::components.panel")
+                            @component("dashelements::components.panel", ["heading" => 'h2'])
+                                @slot("title")
+                                    Edit Post
+                                @endslot
                                 {{ Form::model($content, ["url" => "/bluelines/posts/$content->id", "method" => "put", "files" => true]) }}
 
                                 @include("bluelines::partials.forms.post")
@@ -62,10 +59,5 @@
             </div>
 
         </div>
-        <nav class="navbar navbar-fixed-bottom">
-            <div class="container-fluid">
-                <p class="navbar-text navbar-center">Signed in as Mark Otto</p>
-            </div>
-        </nav>
     </div>
 @endsection

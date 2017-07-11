@@ -2,18 +2,6 @@
 @section('title', 'Content admin')
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-md-12">
-                <h1>Manage Content</h1>
-                <hr>
-                <p>
-                    <a href="/admin/content/create" class="btn btn-primary">Create New Post</a>
-                </p>
-            </div>
-
-
-        </div>
 
         <div class="row">
             <!-- Dashboard content -->
@@ -25,7 +13,7 @@
 
                         <div class="col-md-12">
 
-                            @component("dashelements::components.panel")
+                            @component("dashelements::components.panel", ["heading" => 'h2', "title" => "Manage Content"])
 
                                 @include("dashelements::elements.data-table", ["data" => $content])
 
@@ -91,10 +79,5 @@
             </div>
 
         </div>
-        <nav class="navbar navbar-fixed-bottom">
-            <div class="container-fluid">
-                <p class="navbar-text navbar-center">Signed in as Mark Otto</p>
-            </div>
-        </nav>
     </div>
 @endsection
