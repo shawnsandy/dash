@@ -1,5 +1,5 @@
 <li>
-    <a href="admin"><i class="fa fa-tachometer"></i> <span class="nav-text">Dashboard</span></a>
+    <a href="/admin"><i class="fa fa-tachometer"></i> <span class="nav-text">Dashboard</span></a>
 </li>
 <li>
     <a href="/admin/content"><i class="fa fa-pencil-square"></i> <span class="nav-text"> Articles</span></a>
