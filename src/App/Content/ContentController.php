@@ -24,14 +24,14 @@ class ContentController extends Controller
 
     public function create()
     {
-
+        return view("dash::content.create-content");
     }
 
     public function edit(Blueline $content)
     {
 
         $content->load("categories", "tags");
-        return view("dash::content.edit");
+        return view("dash::content.edit-content", compact("content"));
 
     }
 

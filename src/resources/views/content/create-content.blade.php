@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             @component("dashelements::components.panel")
-                                {{ Form::model($content, ["url" => "/bluelines/posts/$content->id", "method" => "put", "files" => true]) }}
+                                {{ Form::open( ["url" => "/bluelines/posts", "files" => true]) }}
 
                                 @include("bluelines::partials.forms.post")
 
