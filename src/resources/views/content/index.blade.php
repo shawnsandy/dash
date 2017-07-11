@@ -1,16 +1,17 @@
 @extends($dashTheme."layouts.layout")
-@section('title', ':package_name')
+@section('title', 'Content admin')
 @section('content')
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-md-6">
-                <h1>Content Management</h1>
+            <div class="col-md-12">
+                <h1>Manage Content</h1>
+                <hr>
+                <p>
+                    <a href="/admin/content/create" class="btn btn-primary">Create New Post</a>
+                </p>
             </div>
 
-            <div class="col-md-6 text-right">
-                Status
-            </div>
 
         </div>
 
@@ -21,55 +22,15 @@
                 <section class="widgets">
 
                     <div class="row">
-                        <div class="col-md-4">
-                            <aside class="panel">
-                                <div class="panel-body">
-                                    <p class="h4 text-capitalize">Panel Title</p>
-                                    <hr>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias dicta, dolores doloribus ipsa vel.
-                                    </p>
-                                </div>
-                            </aside>
-                        </div>
-
-
-                        <div class="col-md-4">
-                            <aside class="panel">
-                                <div class="panel-body">
-                                    <p class="h4 text-capitalize">Panel Title</p>
-                                    <hr>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias dicta, dolores doloribus ipsa vel.
-                                    </p>
-                                </div>
-                            </aside>
-                        </div>
-
-                        <div class="col-md-4">
-                            <aside class="panel">
-                                <div class="panel-body">
-                                    <p class="h4 text-capitalize">Panel Title</p>
-                                    <hr>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias dicta, dolores doloribus ipsa vel.
-                                    </p>
-                                </div>
-                            </aside>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
 
                         <div class="col-md-12">
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading lead">
-                                    Data Collections
-                                </div>
-                              @include("bluelines::components.recent-content")
-                            </div>
+                            @component("dashelements::components.panel")
+
+                                @include("dashelements::elements.data-table", ["data" => $content])
+
+                            @endcomponent
+
                         </div>
 
                     </div>
@@ -85,7 +46,9 @@
                                 <div class="panel-body">
                                     <h3>Simple Sidebar</h3>
                                     <hr>
-                                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear.
+                                    <p>This template has a responsive menu toggling system. The menu will appear
+                                        collapsed on smaller screens, and will appear non-collapsed on larger screens.
+                                        When toggled using the button below, the menu will appear/disappear.
                                         On small screens, the page content will be pushed off canvas.
                                     </p>
                                     <p>Make sure to keep all page content within the
@@ -118,7 +81,9 @@
 
                 <aside class="panel">
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque commodi dignissimos dolorem ea eaque earum facilis in inventore ipsum maxime minima nisi, obcaecati omnis quaerat, quod rem rerum tempore.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque commodi
+                            dignissimos dolorem ea eaque earum facilis in inventore ipsum maxime minima nisi, obcaecati
+                            omnis quaerat, quod rem rerum tempore.</p>
                     </div>
                 </aside>
 

@@ -17,7 +17,9 @@ class ContentController extends Controller
 
     public function index()
     {
-        return view("dash::content");
+
+        $content = Blueline::select(["id", "title", "created_at"])->desc()->get();
+        return view("dash::content.index", compact("content"));
     }
 
     public function create()
@@ -29,7 +31,7 @@ class ContentController extends Controller
     {
 
         $content->load("categories", "tags");
-        return view("dash::");
+        return view("dash::content.edit");
 
     }
 
