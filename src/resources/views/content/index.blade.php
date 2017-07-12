@@ -57,25 +57,12 @@
             <!--  side bar -->
 
             <div class="col-md-3">
-                <aside class="panel">
-                    <div class="panel-heading">
-                        <p class="lead">Sidebar...</p>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
+                <aside class="panel widget-forms">
+                    @include("bluelines::components.post-categories")
                 </aside>
 
-                <aside class="panel">
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque commodi
-                            dignissimos dolorem ea eaque earum facilis in inventore ipsum maxime minima nisi, obcaecati
-                            omnis quaerat, quod rem rerum tempore.</p>
-                    </div>
+                <aside class="panel widget-forms">
+                    @include("bluelines::components.post-tags")
                 </aside>
 
 
@@ -84,3 +71,22 @@
         </div>
     </div>
 @endsection
+@push('styles')
+<style>
+    .hide-element {
+        display: none;
+    }
+
+    .validate-error {
+        border-color: red;
+        color: red;
+    }
+    td {
+        font-size: 14px;
+    }
+</style>
+
+@endpush
+@push("scripts")
+<script src="/assets/bluelines/js/blue.js"></script>
+@endpush
