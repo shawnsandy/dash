@@ -67,7 +67,7 @@
 
                             <div class="main-panel">
                                 @component("dashelements::components.panel")
-                                    @include("dashelements::elements.data-table", ['data' => $data ])
+                                    @include("dashelements::elements.data-table", ['data' => $data, "action_url" => "admin/users/" ])
                                 @endcomponent
                             </div>
 
