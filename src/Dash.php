@@ -11,6 +11,7 @@ namespace ShawnSandy\Dash;
 use Brotzka\DotenvEditor\DotenvEditor;
 use Illuminate\Support\HtmlString;
 use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
+use Route;
 use ShawnSandy\Dash\Builder\GenerateFormsFields;
 
 class Dash
@@ -60,6 +61,10 @@ class Dash
     public function htmlString($string) {
         $htmlString = new HtmlString($string);
         return $htmlString ;
+    }
+
+    public function countRouteUri() {
+        return explode("/", Route::current()->uri());
     }
 
 }

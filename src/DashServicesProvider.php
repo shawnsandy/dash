@@ -2,11 +2,14 @@
 
 namespace ShawnSandy\Dash;
 
+use App\User;
 use Html;
 use Illuminate\Support\ServiceProvider;
+use ShawnSandy\Bluelines\App\Blueline;
 use ShawnSandy\Dash\Builder\GenerateFields;
 use ShawnSandy\Dash\Builder\GenerateFormFieldsFacade;
 use ShawnSandy\Dash\Builder\GenerateFormsFields;
+
 
 /**
  * Class Provider
@@ -47,9 +50,9 @@ class DashServicesProvider extends ServiceProvider
          */
         $this->publishes(
             [
-                __DIR__.'/resources/assets/js/' => public_path('assets/dash/js/'),
-                __DIR__.'/public/css/pagekit/sass/' => public_path('assets/dash/css/'),
-                __DIR__.'/public/css/' => public_path('css/'),
+                __DIR__ . '/resources/assets/js/' => public_path('assets/dash/js/'),
+                __DIR__ . '/public/css/pagekit/sass/' => public_path('assets/dash/css/'),
+                __DIR__ . '/public/css/' => public_path('css/'),
             ],
             'dash-assets'
         );
@@ -66,10 +69,18 @@ class DashServicesProvider extends ServiceProvider
             include_once __DIR__ . '/Helpers/helper.php';
         endif;
 
-        include_once __DIR__ ."/components/html-components.php";
-        include_once __DIR__ ."/components/form-components.php";
+        include_once __DIR__ . "/components/html-components.php";
+        include_once __DIR__ . "/components/form-components.php";
 
         $this->themeDefaults();
+
+
+       view()->composer("dash::index", function ($view) {
+            $user_count = User::count();
+            $post_count = Blueline::count();
+            $view->with(compact("user_count", "post_count"));
+        });
+
     }
 
     /**
