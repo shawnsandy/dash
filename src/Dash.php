@@ -63,7 +63,7 @@ class Dash
         return $htmlString ;
     }
 
-    public function countRouteUri() {
+    public function routeUri() {
         return explode("/", Route::current()->uri());
     }
 
