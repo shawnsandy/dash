@@ -33,7 +33,7 @@
 </head>
 
 <body>
-<div id="wrapper" class="toggled">
+<div id="wrapper" class="{{ (count(Dash::countRouteUri()) > 1 ) ?  "toggled" : "" }} dash-sidebar">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
