@@ -33,7 +33,7 @@
 </head>
 
 <body>
-<div id="wrapper" class="toggled">
+<div id="wrapper" class="{{ (count(Dash::countRouteUri()) > 1 ) ?  "toggled" : "" }} dash-sidebar">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -123,7 +123,7 @@
     $(".menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-        $(".nav-text").toggle();
+       // $(".nav-text").toggle();
     });
 </script>
 
