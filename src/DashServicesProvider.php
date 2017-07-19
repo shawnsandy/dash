@@ -52,8 +52,7 @@ class DashServicesProvider extends ServiceProvider
             [
                 __DIR__ . '/resources/assets/js/' => public_path('assets/dash/js/'),
                 __DIR__ . '/public/css/pagekit/sass/' => public_path('assets/dash/css/'),
-                __DIR__ . '/resources/assets/css/' => public_path('assets/dash/css/'),
-                __DIR__ . '/public/css/' => public_path('css/'),
+                __DIR__ . '/resources/assets/sass/' => public_path('assets/dash/css/'),
             ],
             'dash-assets'
         );
@@ -108,6 +107,7 @@ class DashServicesProvider extends ServiceProvider
         $this->app->bind(GenerateFormFieldsFacade::class, function () {
             return new GenerateFields();
         });
+
 
 
     }
