@@ -33,7 +33,7 @@
 </head>
 
 <body>
-<div id="wrapper" class="{{ (count(Dash::countRouteUri()) > 1 ) ?  "toggled" : "" }} dash-sidebar">
+<div id="wrapper" class="{{ (count(Dash::routeUri()) > 1 ) ?  "toggled" : "" }} dash-sidebar">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -98,6 +98,7 @@
             <div class="container-fluid">
                 {{ Html::dashMessages() }}
             </div>
+
             @yield("content")
         </main>
 
