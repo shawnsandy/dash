@@ -39,7 +39,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand menu-toggle">
                 <a href="#" class="">
-                    <i class="fa fa-ellipsis-h"></i> <span class="nav-text"> Dash</span>
+                    <i class="fa fa-ellipsis-h"></i> <span class="nav-text"></span>
                 </a>
             </li>
             @include("dash::partials.sidebar-menu")
