@@ -36,11 +36,14 @@
 
             <div class="col-md-3">
 
-                <aside class="panel">
+                @component("dashelements::components.panel", ["title" => "Preview", "heading" => "h4"])
 
-                    <img src="<?= $content->post_thumbnail ?>?w=400" class="img-responsive">
+                    <p><img src="<?= $content->post_thumbnail ?>?w=400" class="img-responsive"></p>
+                    <p>
+                        <?= $content->excerpt ?>
+                    </p>
 
-                </aside>
+                @endcomponent
 
                 <aside class="panel">
                     @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
