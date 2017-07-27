@@ -18,7 +18,7 @@ class ContentController extends Controller
     public function index()
     {
 
-        $content = Blueline::select(["id", "title", "status", "created_at"])->desc()->get();
+        $content = Blueline::select(["id", "title", "status", "created_at"])->latest()->get();
         return view("dash::content.index", compact("content"));
     }
 
