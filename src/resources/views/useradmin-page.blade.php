@@ -13,7 +13,9 @@
             <div class="panel">
                 <div class="panel-body">
                     <h4>{{ Html::dashIcons() }}Sidebar Title</h4>
-                    <hr>
+
+                    @include("dashauth::partials.roles")
+
                 </div>
             </div>
         </div>
