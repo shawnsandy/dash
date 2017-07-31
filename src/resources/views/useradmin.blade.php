@@ -8,7 +8,7 @@
                 <section class="widgets">
                     <div class="col-md-12">
 
-                        {{ dump(URL::current()) }}
+
                         <div class="row">
                             @component("dash::components.panels.dashboard", ['title' => "User Admin"])
                                 {{ Html::dataTable($users, ["id", "name", "email", "created_at"],  ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], ['class' => 'data-table'] ) }}
@@ -21,18 +21,14 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <aside>
-                                @component("dash::components.panels.dashboard")
-                                    <p>This template has a responsive menu toggling system. The menu will appear
-                                        collapsed on smaller screens, and will appear non-collapsed on larger screens.
-                                        When toggled using the button below, the menu will appear/disappear.
-                                        On small screens, the page content will be pushed off canvas.
-                                    </p>
-                                    <p>Make sure to keep all page content within the
-                                        <code>#page-content-wrapper</code>.
-                                    </p>
-                                @endcomponent
-                            </aside>
+                            @component("dashelements::components.panel", ["title" => "Manage Roles and Privileges", "heading_class" => "h4"])
+
+                              @include("dashauth::partials.privileges", [
+                              'abilities' => config("dashauth.abilities"),
+                              'roles' => config("dashauth.roles")
+                              ])
+
+                            @endcomponent
                         </div>
                     </div>
                 </section>
