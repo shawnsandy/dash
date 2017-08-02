@@ -17,21 +17,20 @@
                     </div>
                 </section>
 
-                <section>
+                @can('manage_systems')
+                    <section>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            @component("dashelements::components.panel", ["title" => "Manage Roles and Privileges", "heading_class" => "h4"])
-
-                              @include("dashauth::partials.privileges", [
-                              'abilities' => config("dashauth.abilities"),
-                              'roles' => config("dashauth.roles")
-                              ])
-
-                            @endcomponent
+                        <div class="row">
+                            <div class="col-lg-12">
+                                @component("dashelements::components.panel", ["title" => "Manage Roles and Privileges", "heading_class" => "h4"])
+                                    @include("dashauth::partials.privileges")
+                                @endcomponent
+                            </div>
                         </div>
-                    </div>
-                </section>
+
+                    </section>
+                @endcan
+
             </div>
 
             <!--  side bar -->
@@ -40,11 +39,11 @@
 
                 @component("dash::components.panels.info", ["title" => "Users"])
                     {!! Html::entypoFont("compass") !!}
-                   <h3>{{ count($users) }} Registered Users</h3>
+                    <h3>{{ count($users) }} Registered Users</h3>
                 @endcomponent
 
                 @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
-                        {{ Form::createForm('App\User', "admin/users") }}
+                    {{ Form::createForm('App\User', "admin/users") }}
                 @endcomponent
 
             </div>
