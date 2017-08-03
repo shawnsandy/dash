@@ -14,11 +14,13 @@
                         <div class="col-md-12">
 
                             @component("dashelements::components.panel", ["heading" => 'h2'])
+
                                 @slot("title")
                                     Manage Post <a href="/admin/content/create" class="btn btn-primary btn-sm">New Post</a>
                                 @endslot
 
                                 @include("dashelements::elements.data-table", ["data" => $content])
+
 
                             @endcomponent
 
