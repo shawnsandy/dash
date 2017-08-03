@@ -131,7 +131,7 @@ html, body {
 }
 
 .navbar {
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 .toggled .nav-text {
