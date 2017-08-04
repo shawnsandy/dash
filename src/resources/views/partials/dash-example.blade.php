@@ -6,15 +6,12 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <aside class="panel">
-                        <div class="panel-body">
-                            <p class="h4 text-capitalize">Panel Title</p>
-                            <hr>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias dicta, dolores doloribus ipsa vel.
-                            </p>
-                        </div>
-                    </aside>
+                    @component("dash::components.panels.info", ["title" => "Env Settings"])
+                        <p>
+                            Monotonectally matrix fully researched metrics vis-a-vis magnetic portals. Dramatically productize extensible architectures through installed base e-tailers. Objectively evisculate e-business channels after customer directed human capital. Efficiently promote quality synergy without excellent content. Collaboratively coordinate superior users before sustainable resources.
+
+                        </p>
+                    @endcomponent
                 </div>
 
 
