@@ -38,7 +38,6 @@
             <div class="col-md-3">
 
                 @component("dash::components.panels.info", ["title" => "Users"])
-                    {!! Html::entypoFont("compass") !!}
                     <h3>{{ count($users) }} Registered Users</h3>
                 @endcomponent
 
