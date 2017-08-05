@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <aside class="panel">
-                                <h3>{{ Html::dashIcons( "circle-o") }} <span class="small">Recent Posts</span> </h3>
+                                <h3>{{ Html::dashIcons( "file-text") }} <span class="small">Recent Posts</span> </h3>
 
                                 @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
                             </aside>
@@ -49,7 +49,7 @@
                             @endphp
 
                             <div class="main-panel">
-                                @component("dashelements::components.panel", ["title" => "Users", "heading_class" => "h3"])
+                                @component("dashelements::components.panel", ["title" => "Users", "heading_class" => "h3", "icon" => "users"])
                                     @include("dashelements::elements.data-table", ['data' => $data, "action_url" => "admin/users/" ])
                                 @endcomponent
                             </div>
