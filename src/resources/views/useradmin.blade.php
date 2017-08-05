@@ -17,7 +17,7 @@
                     </div>
                 </section>
 
-                @can('manage_systems')
+
                     <section>
 
                         <div class="row">
@@ -29,7 +29,7 @@
                         </div>
 
                     </section>
-                @endcan
+
 
             </div>
 
