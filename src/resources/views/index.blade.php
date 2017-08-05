@@ -31,6 +31,16 @@
                     </div>
 
                     <div class="row">
+                        <div class="col-md-12">
+                            <aside class="panel">
+                                <h3>{{ Html::dashIcons( "circle-o") }} Recent Posts</h3>
+
+                                @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="row">
 
                         <div class="col-md-12">
 
@@ -46,16 +56,6 @@
 
                         </div>
 
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <aside class="panel">
-                                <h3>{{ Html::dashIcons( "circle-o") }} Recent Posts</h3>
-
-                                @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
-                            </aside>
-                        </div>
                     </div>
 
                 </section>
