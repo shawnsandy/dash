@@ -101,6 +101,19 @@
             @yield("content")
         </main>
 
+        <footer>
+        <div class="container-fluid">
+
+        <div class="col-md-12 text-center">
+            <p>
+            Copyright info here
+            </p>
+        </div>
+
+        </div>
+
+        </footer>
+
     </div>
     <!-- /#page-content-wrapper -->
 
