@@ -32,81 +32,29 @@
 
                     <div class="row">
 
-                        <hr>
-
                         <div class="col-md-12">
 
-                            @php $data = \App\User::all() @endphp
-
-                            @component("dashelements::components.collection-table", ['data' => $data ])
-
-                                @slot('table_rows')
-
-                                    @foreach($data as $row)
-                                        <tr>
-                                            <td>{{ $row->id }}</td>
-                                            <td>{{ $row->name }}</td>
-                                            <td>{{ $row->email }}</td>
-                                            <td>{{ $row->created_at }}</td>
-                                            <td>{{ $row->updated_at }}</td>
-                                            <td>{{ $row->avatar }}</td>
-                                            <td>{{ $row->role_id }}</td>
-                                            <td><a href="/{{$row->role_id }}/edit">Edit</a></td>
-                                        </tr>
-                                    @endforeach
-
-                                @endslot
-
-                            @endcomponent
-
-                            @component("dashelements::components.logout-btn")
-                                Logout Now
-                            @endcomponent
-
-                            <hr>
+                            @php
+                                $data = \App\User::all()
+                            @endphp
 
                             <div class="main-panel">
-                                @component("dashelements::components.panel")
+                                @component("dashelements::components.panel", ["title" => "Users", "heading_class" => "h3"])
                                     @include("dashelements::elements.data-table", ['data' => $data, "action_url" => "admin/users/" ])
                                 @endcomponent
                             </div>
 
-                            <hr>
                         </div>
-
 
                     </div>
 
-                </section>
-
-                <section>
-
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
+                            <aside class="panel">
+                                <h3>{{ Html::dashIcons( "circle-o") }} Recent Posts</h3>
 
-                            @component("dash::components.panels.dashboard", ["title" => "Simple Sidebar"])
-
-                                <p>This template has a responsive menu toggling system. The menu will appear
-                                    collapsed on smaller screens, and will appear non-collapsed on larger screens.
-                                    When toggled using the button below, the menu will appear/disappear.
-                                    On small screens, the page content will be pushed off canvas.
-                                </p>
-                                <p>Make sure to keep all page content within the
-                                    <code>#page-content-wrapper</code>.
-                                </p>
-                                <hr>
-                                <h3>Custom Froms</h3>
-                                <?php
-                                $custom_form = [
-                                    "name" => ["label" => "Your Name"],
-                                    "address" => ['label' => "Your Address", "type" => "textarea"],
-                                    "password" => ['label' => "Password", "type" => "password"]
-                                ]
-                                ?>
-
-                                {{ Form::dashCustomFields($custom_form) }}
-
-                            @endcomponent
+                                @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
+                            </aside>
                         </div>
                     </div>
 
