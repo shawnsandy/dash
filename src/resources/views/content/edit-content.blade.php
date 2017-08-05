@@ -48,14 +48,6 @@
                 <aside class="panel">
                     @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
                 </aside>
-
-                <aside class="panel">
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque commodi
-                            dignissimos dolorem ea eaque earum facilis in inventore ipsum maxime minima nisi, obcaecati
-                            omnis quaerat, quod rem rerum tempore.</p>
-                    </div>
-                </aside>
             </div>
 
         </div>
