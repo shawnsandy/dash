@@ -57,8 +57,7 @@
                                 @slot("title")
                                     Users
                                 @endslot
-
-                                    @include("dashelements::elements.data-table", ['data' => $data, "action_url" => "admin/users/" ])
+                                    @include("extras::elements.data-table", ['data' => $data, "action_url" => "admin/users/" ])
                                 @endcomponent
                             </div>
 
