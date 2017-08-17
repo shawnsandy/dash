@@ -22,7 +22,7 @@
 
                                 {{ Form::close() }}
 
-                                {{ Html::ckeditor() }}
+                                {{ Html::tinymce() }}
                             @endcomponent
 
                         </div>
