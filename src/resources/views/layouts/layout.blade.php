@@ -62,7 +62,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand menu-toggle" href="#"><span class="fa fa-bars"></span> </a>
-                    <a class="navbar-brand " href="#">Brand</a>
+                    <a class="navbar-brand " href="/admin">@yield('dash_board_title', "Admin")</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
