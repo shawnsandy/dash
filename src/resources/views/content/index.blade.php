@@ -22,7 +22,7 @@
                                 <a href="/admin/content/create" class="btn btn-primary btn-sm">New Post</a>
                                 <hr>
 
-                                @include("extras::elements.data-table", ["data" => $content])
+                                @include("extras::elements.data-table", ["data" => $content, "action_url" => "/admin/content/"])
 
 
                             @endcomponent
