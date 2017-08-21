@@ -12,7 +12,7 @@
                         <div class="row">
                             @component("dash::components.panels.dashboard", ['title' => "User Admin"])
                                 {{--  {{ Html::dataTable($users, ["id", "name", "email", "created_at"],  ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], ['class' => 'data-table'] ) }}  --}}
-                                 @include("extras::elements.data-table", ['data' => $users, "action_url" => "admin/users/" ])
+                                 @include("extras::elements.data-table", ['data' => $users ])
                             @endcomponent
                         </div>
                     </div>
