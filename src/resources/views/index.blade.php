@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <aside class="panel">
-                                <h3>{{ Html::dashIcons( "file-text") }} <span class="small">Recent Posts</span></h3>
+                                <h3>{{ Html::dashIcons() }}  Recent Posts </h3>
 
                                 @include("bluelines::components.recent-content", ["post_url" => "/admin/content/"])
                             </aside>
@@ -50,9 +50,6 @@
 
                             <div class="main-panel">
                                 @component("extras::components.panel")
-                                    @slot("icon")
-                                        users
-                                    @endslot
 
                                 @slot("title")
                                     Users
