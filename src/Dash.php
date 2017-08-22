@@ -8,9 +8,9 @@
 
 namespace ShawnSandy\Dash;
 
-use Brotzka\DotenvEditor\DotenvEditor;
+use Facades\Brotzka\DotenvEditor\DotenvEditor;
 use Illuminate\Support\HtmlString;
-use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
+use Facades\Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
 use Route;
 use ShawnSandy\Dash\Builder\GenerateFormsFields;
 
@@ -25,8 +25,8 @@ class Dash
     public function __construct()
     {
 
-        $this->logs = app(LaravelLogViewer::class);
-        $this->env = app(DotenvEditor::class);
+        //$this->logs = app(LaravelLogViewer::class);
+        // $this->env = app(DotenvEditor::class);
     }
 
     public function routes()
@@ -41,12 +41,12 @@ class Dash
 
     public function getLogs()
     {
-        return collect($this->logs->all());
+        return collect(LaravelLogViewer::all());
     }
 
     public function getEnv()
     {
-        return $this->env->getContent();
+        return DotenvEditor::getContent();
     }
 
     public function getFillables($model) {
