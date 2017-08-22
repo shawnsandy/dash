@@ -24,7 +24,6 @@
 
                                 @include("extras::elements.data-table", ["data" => $content])
 
-
                             @endcomponent
 
                         </div>
