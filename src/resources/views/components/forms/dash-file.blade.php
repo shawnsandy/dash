@@ -44,6 +44,7 @@
     }
 </style>
 @endpush
+
 @push('scripts')
 <script>
     $(document).ready(function () {
