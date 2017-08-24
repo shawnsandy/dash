@@ -6,7 +6,6 @@ use App\User;
 use Html;
 use Illuminate\Support\ServiceProvider;
 use ShawnSandy\Bluelines\App\Blueline;
-use ShawnSandy\Dash\Builder\GenerateFields;
 use ShawnSandy\Dash\Builder\GenerateFormFieldsFacade;
 use ShawnSandy\Dash\Builder\GenerateFormsFields;
 
@@ -103,12 +102,6 @@ class DashServicesProvider extends ServiceProvider
         $this->app->bind('DashForms', function () {
             return new GenerateFormsFields();
         });
-
-        $this->app->bind(GenerateFormFieldsFacade::class, function () {
-            return new GenerateFields();
-        });
-
-
 
     }
 
